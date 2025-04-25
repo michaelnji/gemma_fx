@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { animate, utils } from 'animejs';
+import { animate, createSpring, utils } from 'animejs';
 
 const route = useRoute();
 const isMenuToggled = ref(false)
@@ -11,7 +11,8 @@ function toggleMenu() {
             menuElement,
             {
                 translateX: '20rem',
-                duration: 300
+                duration: 600,
+                // ease: 'inBounce'
             }
         )
         return
@@ -21,10 +22,14 @@ function toggleMenu() {
         menuElement,
         {
             translateX: '-0rem',
-            duration: 300
+            duration: 200,
+            ease: createSpring({ stiffness: 40 })
         }
     )
+    isMenuToggled.value = true
 }
+
+
 
 </script>
 <template>
@@ -61,7 +66,8 @@ function toggleMenu() {
                     </li>
                     <li class=" rounded-box hover:bg-base-100/10 hover:text-base-content transition duration-150"
                         :class="{ '!bg-primary rounded-full !text-primary-content': route.path.includes('/promo') }">
-                        <NuxtLink to="/promo">Promo codes <span class="badge badge-sm badge-accent">new!</span>
+                        <NuxtLink to="/promo">Promo codes <span class="badge badge-sm badge-accent"
+                                :class="{ '!bg-black !text-primary !shadow-none !border-primary': route.path.includes('/promo') }">new!</span>
                         </NuxtLink>
                     </li>
                     <li>
@@ -88,31 +94,50 @@ function toggleMenu() {
                 <div style="transform:translateX(20rem);"
                     class="nav-menu-animate border translate-2 border-base-300 absolute right-0     w-max  font-mono xl:text-lg font-semibold  rounded-l-2xl bg-base-100   px-3 py-1">
                     <ul class="menu px-1 gap-y-3">
-                        <li class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+                        <li @click="() => {
+                            isMenuToggled = false
+                            toggleMenu()
+                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/' }">
                             <NuxtLink to="/">Home</NuxtLink>
                         </li>
 
-                        <li class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+                        <li @click="() => {
+                            isMenuToggled = false
+                            toggleMenu()
+                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/articles' }">
                             <NuxtLink to="/articles">Articles</NuxtLink>
                         </li>
-                        <li class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+                        <li @click="() => {
+                            isMenuToggled = false
+                            toggleMenu()
+                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/tutorials' }">
                             <NuxtLink to="/tutorials">Tutorials
 
                             </NuxtLink>
                         </li>
-                        <li class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+                        <li @click="() => {
+                            isMenuToggled = false
+                            toggleMenu()
+                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/prop-firms' }">
                             <NuxtLink to="/prop-firms">Prop firm reviews</NuxtLink>
                         </li>
-                        <li class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+                        <li @click="() => {
+                            isMenuToggled = false
+                            toggleMenu()
+                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path.includes('/promo') }">
-                            <NuxtLink to="/promo">Promo codes <span class="badge badge-sm badge-accent">new!</span>
+                            <NuxtLink to="/promo">Promo codes <span class="badge badge-sm badge-accent"
+                                    :class="{ '!bg-black !text-primary !shadow-none !border-primary': route.path.includes('/promo') }">new!</span>
                             </NuxtLink>
                         </li>
-                        <li class="mt-4">
+                        <li @click="() => {
+                            isMenuToggled = false
+                            toggleMenu()
+                        }" class="mt-4">
                             <NuxtLink to="/newsletter" class="btn btn-secondary font-sans lg:btn-sm  ">
                                 <Icon name="ph:envelope-duotone" /> Join our newsletter
 

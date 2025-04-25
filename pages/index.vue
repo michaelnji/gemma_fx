@@ -10,7 +10,8 @@ definePageMeta({
 
         <div class="container pb-12 flex-col flex justify-center items-center mx-auto">
             <div
-                class="badge mb-4 shadow-md shadow-secondary badge-secondary uppercase font-bold text-md min-lg:badge-xl font-acro mx-auto">
+                class="badge mb-4 shadow-md shadow-secondary badge-secondary uppercase flex items-center font-bold text-md min-lg:badge-xl font-mono mx-auto">
+                <Icon name="ph:rocket-launch-duotone" />
                 Launch
                 week
             </div>
@@ -26,7 +27,7 @@ definePageMeta({
                     <h3 class="font-display mt-3 mb-1 font-bold text-xl">
                         Learn how to learn stuff
                     </h3>
-                    <p class="text-base-content/80 text-sm">
+                    <p class="text-base-content/80">
 
                         Proper guidance on learning how to trade. We don't teach you trading, rather we teach you how to
                         learn
@@ -41,7 +42,7 @@ definePageMeta({
                         <h3 class="font-display mt-3 mb-1 font-bold text-xl">
                             Prop Firm reviews
                         </h3>
-                        <p class="text-base-content/80 text-sm">
+                        <p class="text-base-content/80">
 
                             Get honest reviews of prop firms we have workedwith,so you know what to expect
                         </p>
@@ -53,7 +54,7 @@ definePageMeta({
                         <h3 class="font-display mt-3 mb-1 font-bold text-xl">
                             Get coupons and discounts
                         </h3>
-                        <p class="text-base-content/80 text-sm">
+                        <p class="text-base-content/80">
 
                             Get exclusive discounts and coupons for prop firm challenges and other trading tools
 
