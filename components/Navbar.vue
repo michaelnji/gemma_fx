@@ -5,6 +5,7 @@ const route = useRoute();
 const isMenuToggled = ref(false)
 function toggleMenu() {
     const menuElement = utils.$('.nav-menu-animate')[0]
+    // intro
     if (!isMenuToggled.value) {
         animate(
             menuElement,
@@ -15,6 +16,7 @@ function toggleMenu() {
         )
         return
     }
+    // outro
     animate(
         menuElement,
         {
@@ -34,6 +36,7 @@ function toggleMenu() {
                 <Logo />
 
             </div>
+            <!-- lg <-> 2xl -->
             <div
                 class="navbar-center max-w-max font-mono xl:text-lg font-semibold hidden lg:flex rounded-box bg-base-300 px-3 py-1">
                 <ul class="menu menu-horizontal items-center-safe px-1 gap-x-3">
