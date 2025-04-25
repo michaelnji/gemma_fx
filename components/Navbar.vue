@@ -29,7 +29,7 @@ function toggleMenu() {
 </script>
 <template>
     <div>
-        <div class="navbar justify-between p-y5  bg-base-100 shadow-sm">
+        <div class="navbar justify-between py-3  bg-base-100 shadow-sm">
             <div class="">
 
 
@@ -75,7 +75,7 @@ function toggleMenu() {
             </div>
 
             <!-- md <-> xs -->
-            <div class="lg:hidden z-0 relative   w-max">
+            <div class="lg:hidden z-0    w-max">
                 <button class="btn  btn-ghost  flex justify-between items-center swap swap-rotate text-primary"
                     :class="{ 'swap-active': isMenuToggled }" @click="() => {
                         isMenuToggled = !isMenuToggled
