@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@hypernym/nuxt-anime": "^2.1.1",
     "@nuxt/fonts": "0.11.0",
     "@nuxt/icon": "1.11.0",
     "@nuxt/image": "1.10.0",
@@ -21,6 +22,7 @@
     "@unhead/vue": "^2.0.8",
     "@unocss/reset": "^66.1.0-beta.12",
     "@vueuse/nuxt": "13.0.0",
+    "animejs": "^4.0.2",
     "daisyui": "^5.0.28",
     "nuxt": "^3.16.2",
     "pinia": "^3.0.2",
@@ -30,7 +32,11 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@iconify-json/cil": "^1.2.2",
+    "@iconify-json/game-icons": "^1.2.1",
+    "@iconify-json/ph": "^1.2.2",
     "@iconify-json/solar": "^1.2.2",
+    "@iconify-json/svg-spinners": "^1.2.2",
     "@unocss/nuxt": "^66.1.0-beta.12",
     "@unocss/preset-rem-to-px": "^66.1.0-beta.12",
     "@unocss/preset-wind4": "^66.1.0-beta.12",

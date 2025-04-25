@@ -1,0 +1,23 @@
+<script lang="ts" setup>
+
+
+</script>
+<template>
+    <div class="relative ">
+        <!-- <div class="absolute">
+            <GlowingSquares />
+        </div> -->
+        <!-- <div
+            class="absolute -z-1 glow h-10 w-1/3  rounded-4xl bg-transparent shadow-xl transform -rotate-180 shadow-primary translate-x-[200%]  translate-y-3">
+        </div> -->
+        <div
+            class="flex    shadow-md shadow-base-300/10 items-center gap-x-2 px-3 py-1.5 md:px-6 md:py-3 rounded-4xl bg-base-300">
+            <!-- <Icon name="game-icons:abstract-005" class="text-primary" size="30" /> -->
+            <h2 class="text-base xl:text-2xl font-medium text-primary font-display">GemmaFx <span
+                    class="badge badge-primary xl:badge-md badge-sm font-sans ml-2">Blog</span>
+            </h2>
+
+        </div>
+
+    </div>
+</template>

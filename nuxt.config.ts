@@ -15,8 +15,9 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils',
     '@pinia/nuxt',
-    '@vueuse/nuxt',
     // '@unocss/nuxt',
+    '@vueuse/nuxt',
+    // '@hypernym/nuxt-anime'
   ],
   icon: {
     customCollections: [
@@ -55,5 +56,9 @@ export default defineNuxtConfig({
     },
     // use ~public/fonts for your font files
     provider: 'local'
-  }
+  },
+  // anime: {
+  //   composables: true,
+  //   autoImport: true
+  // }
 })
