@@ -42,11 +42,11 @@
         --color-success-content: oklch(39% 0.095 152.535);
         --color-warning: oklch(90% 0.182 98.111);
         --color-warning-content: oklch(42% 0.095 57.708);
-        --color-error: oklch(64% 0.246 16.439);
-    --color-error-content: oklch(96% 0.015 12.422);
-    --radius-selector: 2rem;
-    --radius-field: 2rem;
-    --radius-box: 2rem;
+        --color-error: oklch(84% 0.296 16.439);
+            --color-error-content: oklch(0% 0 0);
+            --radius-selector: 0rem;
+            --radius-field: 0rem;
+            --radius-box: 0rem;
     --size-selector: 0.25rem;
     --size-field: 0.25rem;
     --border: 1px;
