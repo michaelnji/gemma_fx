@@ -3,6 +3,16 @@ import { animate, createSpring, utils } from 'animejs';
 
 const route = useRoute();
 const isMenuToggled = ref(false)
+const target = useTemplateRef<HTMLElement>('mobile-menu')
+
+// closes menu on click outside of menu
+onClickOutside(target, event => {
+    if (isMenuToggled.value) {
+        isMenuToggled.value = !isMenuToggled.value
+        toggleMenu()
+    }
+})
+// toggles menu on small screens with animation
 function toggleMenu() {
     const menuElement = utils.$('.nav-menu-animate')[0]
     // intro
@@ -12,7 +22,7 @@ function toggleMenu() {
             {
                 translateX: '20rem',
                 duration: 600,
-                // ease: 'inBounce'
+                // easing: 'outBounce'
             }
         )
         return
@@ -81,7 +91,7 @@ function toggleMenu() {
             </div>
 
             <!-- md <-> xs -->
-            <div class="lg:hidden z-0    w-max">
+            <div ref="mobile-menu" class="lg:hidden z-0    w-max">
                 <button class="btn  btn-ghost  flex justify-between items-center swap swap-rotate text-primary"
                     :class="{ 'swap-active': isMenuToggled }" @click="() => {
                         isMenuToggled = !isMenuToggled
