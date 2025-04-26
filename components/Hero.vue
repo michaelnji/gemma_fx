@@ -21,13 +21,12 @@
                         <Icon name="ph:chart-line-duotone" size="40" class="text-primary" />
                     </div>
                     <h3 class="font-display mt-3 mb-1 font-bold text-xl">
-                        Learn how to learn stuff
+                        Articles on forex trading
                     </h3>
                     <p class="text-base-content/80">
 
-                        Proper guidance on learning how to trade. We don't teach you trading, rather we teach you how to
-                        learn
-                        trading
+                        Technical analysis, fundamentals, psychology, we write weekly articles
+                        helping you progressa as a trader.
                     </p>
                 </div>
                 <div class="flex flex-col min-md:flex-row gap-x-8">
