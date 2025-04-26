@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <div class="py-12    inset-0 bg-radial-pattern">
+    <div class="pt-12  px-6  ">
 
         <div class="container pb-12 flex-col flex justify-center items-center mx-auto">
             <div
