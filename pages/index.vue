@@ -16,6 +16,12 @@ const activeCategory = ref('featured')
             </div>
         </div>
         <Banner />
-        <CategoryBar :tab="activeCategory" @category-change="(e) => activeCategory = e" />
+        <div class="sticky top-0 border-b border-stone-700/60">
+            <CategoryBar :tab="activeCategory" @category-change="(e) => activeCategory = e" />
+        </div>
+        <div class=" min-h-screen">
+            <!-- Featured posts -->
+            <SectionsFeatured v-if="activeCategory === 'featured'" />
+        </div>
     </div>
 </template>

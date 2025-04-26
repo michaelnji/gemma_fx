@@ -8,8 +8,7 @@
             <GlowingSquares />
         </div> -->
 
-        <div
-            class="flex    shadow-md shadow-base-300/10 items-center gap-x-2 px-3 py-1.5 md:px-6 md:py-3 rounded-4xl bg-base-300">
+        <div class="flex    shadow-md shadow-base-300/10 items-center gap-x-2 px-3 py-1.5 md:px-6 md:py-3  bg-base-300">
             <h2 class="text-base xl:text-2xl font-medium text-primary font-display">GemmaFx <span
                     class="badge badge-primary xl:badge-md badge-sm font-sans ml-2">Blog</span>
             </h2>
@@ -18,3 +17,4 @@
 
     </div>
 </template>
+

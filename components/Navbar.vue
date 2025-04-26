@@ -53,28 +53,28 @@ function toggleMenu() {
             </div>
             <!-- lg <-> 2xl -->
             <div
-                class="navbar-center max-w-max font-mono xl:text-lg font-semibold hidden lg:flex rounded-box bg-base-300 px-3 py-1">
+                class="navbar-center max-w-max font-mono xl:text-lg font-semibold hidden lg:flex rounded-none bg-base-300 px-3 py-1">
                 <ul class="menu menu-horizontal items-center-safe px-1 gap-x-3">
-                    <li class=" rounded-box hover:bg-base-100/10 hover:text-base-content transition duration-150"
+                    <li class=" rounded-none hover:bg-base-100/10 hover:text-base-content transition duration-150"
                         :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/' }">
                         <NuxtLink to="/">Home</NuxtLink>
                     </li>
 
-                    <li class=" rounded-box hover:bg-base-100/10 hover:text-base-content transition duration-150"
+                    <li class=" rounded-none hover:bg-base-100/10 hover:text-base-content transition duration-150"
                         :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/articles' }">
                         <NuxtLink to="/articles">Articles</NuxtLink>
                     </li>
-                    <li class=" rounded-box hover:bg-base-100/10 hover:text-base-content transition duration-150"
+                    <li class=" rounded-none hover:bg-base-100/10 hover:text-base-content transition duration-150"
                         :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/tutorials' }">
                         <NuxtLink to="/tutorials">Tutorials
 
                         </NuxtLink>
                     </li>
-                    <li class=" rounded-box hover:bg-base-100/10 hover:text-base-content transition duration-150"
+                    <li class=" rounded-none hover:bg-base-100/10 hover:text-base-content transition duration-150"
                         :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/prop-firms' }">
                         <NuxtLink to="/prop-firms">Prop firm reviews</NuxtLink>
                     </li>
-                    <li class=" rounded-box hover:bg-base-100/10 hover:text-base-content transition duration-150"
+                    <li class=" rounded-none hover:bg-base-100/10 hover:text-base-content transition duration-150"
                         :class="{ '!bg-primary rounded-full !text-primary-content': route.path.includes('/promo') }">
                         <NuxtLink to="/promo">Promo codes <span class="badge badge-sm badge-accent"
                                 :class="{ '!bg-black !text-primary !shadow-none !border-primary': route.path.includes('/promo') }">new!</span>
@@ -102,12 +102,12 @@ function toggleMenu() {
 
                 </button>
                 <div style="transform:translateX(20rem);"
-                    class="nav-menu-animate border translate-2 border-base-300 absolute right-0     w-max  font-mono xl:text-lg font-semibold  rounded-l-2xl bg-base-100   px-3 py-1">
+                    class="nav-menu-animate border translate-2 border-base-300 absolute right-0     w-max  font-mono xl:text-lg font-semibold   bg-base-100   px-3 py-1">
                     <ul class="menu px-1 gap-y-3">
                         <li @click="() => {
                             isMenuToggled = false
                             toggleMenu()
-                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+}" class=" rounded-none hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/' }">
                             <NuxtLink to="/">Home</NuxtLink>
                         </li>
@@ -115,14 +115,14 @@ function toggleMenu() {
                         <li @click="() => {
                             isMenuToggled = false
                             toggleMenu()
-                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+                        }" class=" rounded-none hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/articles' }">
                             <NuxtLink to="/articles">Articles</NuxtLink>
                         </li>
                         <li @click="() => {
                             isMenuToggled = false
                             toggleMenu()
-                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+                        }" class=" rounded-none hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/tutorials' }">
                             <NuxtLink to="/tutorials">Tutorials
 
@@ -131,14 +131,14 @@ function toggleMenu() {
                         <li @click="() => {
                             isMenuToggled = false
                             toggleMenu()
-                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+                        }" class=" rounded-none hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path === '/prop-firms' }">
                             <NuxtLink to="/prop-firms">Prop firm reviews</NuxtLink>
                         </li>
                         <li @click="() => {
                             isMenuToggled = false
                             toggleMenu()
-                        }" class=" rounded-box hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
+                        }" class=" rounded-none hover:bg-base-100/10 text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary rounded-full !text-primary-content': route.path.includes('/promo') }">
                             <NuxtLink to="/promo">Promo codes <span class="badge badge-sm badge-accent"
                                     :class="{ '!bg-black !text-primary !shadow-none !border-primary': route.path.includes('/promo') }">new!</span>
