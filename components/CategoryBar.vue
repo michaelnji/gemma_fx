@@ -10,7 +10,7 @@
 </script>
 <template>
 
-    <div class=" w-full bg-base-100">
+    <div class=" w-full bg-base-100 !z-2">
         <div class=" w-screen justify-center     flex items-center ">
             <button @click="() => changeTabs('featured')"
                 class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content  p-4 transition  items-center gap-x-3 col-auto"

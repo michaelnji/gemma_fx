@@ -15,8 +15,8 @@
             ullam esse iusto excepturi!
         </p>
         <div class="mt-2 flex items-center gap-x-1">
-            <Icon name="solar:pen-2-bold-duotone" class="text-secondary" />
-            <p class=" text-stone-200/70 font-mono">[<span class="italic">Gemtrader</span>]</p>
+            <p class=" text-stone-200/70 font-mono">[<span class="italic text-secondary">Gemtrader</span>]</p>
+
         </div>
         <div class="mt-6 flex items-center justify-between gap-x-4 w-full">
             <button class=" btn btn-primary btn-block  btn-outline ">Read article</button>
