@@ -21,7 +21,7 @@
                 <div class=" md:hidden">
                     <Icon name="ph:star-duotone" />
                 </div>
-                <p class="hidden md:block text-lg  font-black">Featured</p>
+                <p class="hidden md:block text-lg  font-medium">Featured</p>
             </button>
             <button @click="() => changeTabs('analysis')" :class="{
                 '!bg-primary !text-primary-content': tab === 'analysis'
@@ -33,7 +33,7 @@
                 <div class=" md:hidden">
                     <Icon name="ph:chart-line-up-duotone" />
                 </div>
-                <p class="hidden md:block text-lg  font-black"> Analysis</p>
+                <p class="hidden md:block text-lg  font-medium"> Analysis</p>
             </button>
             <button @click="() => changeTabs('rookies')" :class="{
                 '!bg-primary !text-primary-content': tab === 'rookies'
@@ -45,7 +45,7 @@
                 <div class=" md:hidden">
                     <Icon name="ph:baby-duotone" />
                 </div>
-                <p class="hidden md:block text-lg  font-black">Rookies</p>
+                <p class="hidden md:block text-lg  font-medium">Novice</p>
             </button>
             <button @click="() => changeTabs('software')" :class="{
                 '!bg-primary !text-primary-content': tab === 'software'
@@ -57,7 +57,7 @@
                 <div class=" md:hidden">
                     <Icon name="ph:laptop-duotone" />
                 </div>
-                <p class="hidden md:block text-lg  font-black">Sotfware</p>
+                <p class="hidden md:block text-lg  font-medium">Sotfware</p>
             </button>
             <button @click="() => changeTabs('tools')" :class="{
                 '!bg-primary !text-primary-content': tab === 'tools'
@@ -69,7 +69,7 @@
                 <div class=" md:hidden">
                     <Icon name="ph:toolbox-duotone" />
                 </div>
-                <p class="hidden md:block text-lg  font-black"> Tools</p>
+                <p class="hidden md:block text-lg  font-medium"> Tools</p>
             </button>
         </div>
     </div>
