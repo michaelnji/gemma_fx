@@ -1,5 +1,6 @@
 <!-- homepage (you can delete this page to start your project) -->
 <script lang="ts" setup>
+
 definePageMeta({
     layout: 'default'
 })
@@ -22,6 +23,14 @@ const activeCategory = ref('featured')
         <div class=" min-h-screen">
             <!-- Featured posts -->
             <SectionsFeatured v-if="activeCategory === 'featured'" />
+            <!--Market analysis -->
+            <SectionsAnalysis v-if="activeCategory === 'analysis'" />
+            <!--Rookies -->
+            <SectionsRookies v-if="activeCategory === 'rookies'" />
+            <!--Software -->
+            <SectionsSoftware v-if="activeCategory === 'software'" />
+            <!--Tools -->
+            <SectionsTools v-if="activeCategory === 'tools'" />
         </div>
     </div>
 </template>
