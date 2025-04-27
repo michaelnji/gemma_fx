@@ -9,15 +9,16 @@
 /* Define your branding fonts here*/
 @theme {
     --font-mono: "Operator Mono Lig";
-    --font-Lagistha: "Lagistha";
-    --font-display: "Inter";
-        --font-body: "Inter UI", "Acro Mono";
-        --font-sans: "Inter UI", "Acro Mono";
+    /* --font-Lagistha: "Lagistha"; */
+        --font-display: "Satoshi";
+        --font-body: "Hind", "Inter";
+        --font-sans: "Hind", "Inter";
     --font-acro: "Acro Mono";
     --font-pixeled: "Pixeled";
-        --font-khaviax: "Khaviax";
+        /* --font-khaviax: "Khaviax";
         --font-inter: "Inter";
             --font-inter-ui: "Inter UI";
+                */
 }
 
 @plugin "daisyui/theme" {
@@ -51,6 +52,6 @@
     --size-selector: 0.25rem;
     --size-field: 0.25rem;
     --border: 1px;
-    --depth: 1;
+    --depth: 4;
     --noise: 1;
 }

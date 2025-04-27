@@ -12,8 +12,10 @@
                 week
             </div>
             <h1
-                class="text-center font-display font-bold min-sm:text-6xl text-5xl text-pretty min-md:text-7xl  min-lg:text-8xl">
-                Your <span class="text-primary">trusted resource</span> for forex trading excellence
+                class="text-center font-display font-extrabold min-sm:text-6xl text-5xl text-pretty min-md:text-7xl  min-lg:text-8xl bg-clip-text bg-gradient-to-t from-primary via-base-content  to-base-content py-6 text-transparent ">
+                Your <span
+                    class="bg-clip-text bg-gradient-to-t from-primary-content via-primary  to-primary text-transparent ">trusted
+                    resource</span> for forex trading excellence
             </h1>
             <div class="max-w-2xl mt-8 w-full flex flex-col justify-center items-center gap-8">
                 <div class="mt-3 p-6  rounded-box  bg-base-100 w-full  min-md:w-3/4">

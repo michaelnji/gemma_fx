@@ -7,5 +7,8 @@
         <div class="">
             <slot></slot>
         </div>
+        <div class="pt-12">
+            <Footer />
+        </div>
     </div>
 </template>

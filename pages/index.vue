@@ -17,20 +17,27 @@ const activeCategory = ref('featured')
             </div>
         </div>
         <Banner />
-        <div class="sticky top-0 border-b border-stone-700/60">
-            <CategoryBar :tab="activeCategory" @category-change="(e) => activeCategory = e" />
+        <div>
+            <div class="sticky top-0 border-b border-stone-700/60">
+                <CategoryBar :tab="activeCategory" @category-change="(e) => activeCategory = e" />
+            </div>
+            <div class="">
+                <!-- Featured posts -->
+                <SectionsFeatured v-if="activeCategory === 'featured'" />
+                <!--Market analysis -->
+                <SectionsAnalysis v-if="activeCategory === 'analysis'" />
+                <!--Rookies -->
+                <SectionsRookies v-if="activeCategory === 'rookies'" />
+                <!--Software -->
+                <SectionsSoftware v-if="activeCategory === 'software'" />
+                <!--Tools -->
+                <SectionsTools v-if="activeCategory === 'tools'" />
+            </div>
         </div>
-        <div class=" min-h-screen">
-            <!-- Featured posts -->
-            <SectionsFeatured v-if="activeCategory === 'featured'" />
-            <!--Market analysis -->
-            <SectionsAnalysis v-if="activeCategory === 'analysis'" />
-            <!--Rookies -->
-            <SectionsRookies v-if="activeCategory === 'rookies'" />
-            <!--Software -->
-            <SectionsSoftware v-if="activeCategory === 'software'" />
-            <!--Tools -->
-            <SectionsTools v-if="activeCategory === 'tools'" />
+        <div class="md:space-y-48 space-y-24 mt-12 md:mt-24 xl:mt-48">
+            <CouponCodeSection />
+            <Stats />
+            <NewsletterSection class="mb-12" />
         </div>
     </div>
 </template>
