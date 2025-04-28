@@ -10,8 +10,8 @@
         </div>
         <h2 class="font-bold text-2xl text-pretty font-display">Your fx gurus are scamming you</h2>
         <div class="flex items-center gap-x-3">
-            <p class="mt-2 text-sm ">12th April 2025</p>
-            <span class="   text-sm  text-accent  flex items-center gap-x-1 ">
+            <p class="mt-2  ">12th April 2025</p>
+            <span class="     text-accent  flex items-center gap-x-1 ">
                 <Icon name="ph:book-bookmark-duotone" size="18" /> Featured
             </span>
         </div>

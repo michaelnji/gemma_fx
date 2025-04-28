@@ -7,7 +7,7 @@
             class="text-center font-display font-medium min-sm:text-5xl text-4xl text-pretty bg-clip-text bg-gradient-to-t from-stone-500 via-stone-100 to-base-content text-transparent py-1 ">
             The best at providing <span
                 class="bg-clip-text bg-gradient-to-t from-secondary-content via-secondary  to-primary text-transparent ">unbiased</span>
-            forex
+            FX
             articles
         </h1>
         <div class="grid grid-cols-1 mt-8 content-center md:grid-cols-3 gap-4 ">

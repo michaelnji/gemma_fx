@@ -8,7 +8,7 @@
 
 /* Define your branding fonts here*/
 @theme {
-    --font-mono: "Heming Variable";
+    --font-mono: "cnr";
         --font-display: "Grifter";
         --font-body: "Actay", "Trap";
         --font-sans: "Actay", "Trap";

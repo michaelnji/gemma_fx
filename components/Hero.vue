@@ -6,7 +6,7 @@
 
         <div class="container pb-12 flex-col flex justify-center items-center mx-auto">
             <div
-                class=" mb-4 uppercase flex items-center font-bold text-md  font-mono mx-auto bg-gradient-to-b from-stone-800/30 to-stone-900/90 border border-primary/50 text-primary px-6 py-2">
+                class=" mb-4  flex items-center font-bold text-md  font-mono mx-auto bg-gradient-to-b from-stone-800/30 to-stone-900/90 border border-primary/50 text-primary px-6 py-2">
 
                 Launch
                 week
