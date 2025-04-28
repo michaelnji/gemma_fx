@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="heart" format="1">
+  <advance width="772"/>
+  <unicode hex="2665"/>
+  <note>
+    uni2665
+  </note>
+  <outline>
+    <contour>
+      <point x="558" y="696" type="curve" smooth="yes"/>
+      <point x="476" y="696"/>
+      <point x="412" y="628"/>
+      <point x="391" y="572" type="curve" smooth="yes"/>
+      <point x="389" y="567"/>
+      <point x="382" y="567"/>
+      <point x="380" y="572" type="curve" smooth="yes"/>
+      <point x="359" y="628"/>
+      <point x="293" y="696"/>
+      <point x="213" y="696" type="curve" smooth="yes"/>
+      <point x="127" y="696"/>
+      <point x="38" y="631"/>
+      <point x="38" y="527" type="curve" smooth="yes"/>
+      <point x="38" y="350"/>
+      <point x="324" y="48"/>
+      <point x="377" y="-7" type="curve" smooth="yes"/>
+      <point x="382" y="-11"/>
+      <point x="389" y="-11"/>
+      <point x="394" y="-7" type="curve" smooth="yes"/>
+      <point x="447" y="48"/>
+      <point x="733" y="350"/>
+      <point x="733" y="526" type="curve"/>
+      <point x="733" y="632"/>
+      <point x="648" y="696"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2020-06-14 21:16:05 +0000</string>
+    </dict>
+  </lib>
+</glyph>

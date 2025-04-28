@@ -8,17 +8,11 @@
 
 /* Define your branding fonts here*/
 @theme {
-    --font-mono: "Operator Mono Lig";
-    /* --font-Lagistha: "Lagistha"; */
-        --font-display: "Satoshi";
-        --font-body: "Hind", "Inter";
-        --font-sans: "Hind", "Inter";
-    --font-acro: "Acro Mono";
-    --font-pixeled: "Pixeled";
-        /* --font-khaviax: "Khaviax";
-        --font-inter: "Inter";
-            --font-inter-ui: "Inter UI";
-                */
+    --font-mono: "Heming Variable";
+        --font-display: "Grifter";
+        --font-body: "Actay", "Trap";
+        --font-sans: "Actay", "Trap";
+        --font-acro: "Hanson";
 }
 
 @plugin "daisyui/theme" {
@@ -28,27 +22,27 @@
     color-scheme: "dark";
     --color-base-100: oklch(0% 0 0);
     --color-base-200: oklch(14% 0 0);
-        --color-base-300: oklch(20% 0 0);
+    --color-base-300: oklch(20% 0 0);
         --color-base-content: oklch(97% 0 0);
         --color-primary: oklch(89% 0.196 126.665);
         --color-primary-content: oklch(26% 0.051 172.552);
         --color-secondary: oklch(82% 0.119 306.383);
         --color-secondary-content: oklch(27% 0.077 45.635);
     --color-accent: oklch(100% 0.20 40);
-        --color-accent-content: oklch(0% 0 0);
+    --color-accent-content: oklch(0% 0 0);
     --color-neutral-content: oklch(26% 0 0);
-        --color-neutral: oklch(98% 0 0);
+    --color-neutral: oklch(98% 0 0);
         --color-info: oklch(86% 0.127 207.078);
         --color-info-content: oklch(39% 0.07 227.392);
         --color-success: oklch(99% 0.30 154.449);
-            --color-success-content: oklch(0% 0.095 152.535);
+        --color-success-content: oklch(0% 0.095 152.535);
         --color-warning: oklch(90% 0.182 98.111);
         --color-warning-content: oklch(42% 0.095 57.708);
         --color-error: oklch(84% 0.296 16.439);
         --color-error-content: oklch(0% 0 0);
-            --radius-selector: 0rem;
-            --radius-field: 0rem;
-            --radius-box: 0rem;
+        --radius-selector: 0rem;
+        --radius-field: 0rem;
+        --radius-box: 0rem;
     --size-selector: 0.25rem;
     --size-field: 0.25rem;
     --border: 1px;

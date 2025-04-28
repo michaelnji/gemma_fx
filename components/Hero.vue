@@ -2,17 +2,17 @@
 
 </script>
 <template>
-    <div class="pt-12  px-6  ">
+    <div class="pt-12  px-3  ">
 
         <div class="container pb-12 flex-col flex justify-center items-center mx-auto">
             <div
-                class="badge mb-4 shadow-md shadow-secondary badge-secondary uppercase flex items-center font-bold text-md min-lg:badge-xl font-mono mx-auto">
-                <Icon name="ph:rocket-launch-duotone" />
+                class=" mb-4 uppercase flex items-center font-bold text-md  font-mono mx-auto bg-gradient-to-b from-stone-800/30 to-stone-900/90 border border-primary/50 text-primary px-6 py-2">
+
                 Launch
                 week
             </div>
             <h1
-                class="text-center font-display font-extrabold min-sm:text-6xl text-5xl text-pretty min-md:text-7xl  min-lg:text-8xl bg-clip-text bg-gradient-to-t from-primary via-base-content  to-base-content py-6 text-transparent ">
+                class="text-center font-display font-extrabold min-sm:text-6xl text-5xl text-pretty min-md:text-7xl  min-lg:text-8xl">
                 Your <span
                     class="bg-clip-text bg-gradient-to-t from-primary-content via-primary  to-primary text-transparent ">trusted
                     resource</span> for forex trading excellence
