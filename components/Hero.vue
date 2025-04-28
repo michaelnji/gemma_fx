@@ -5,11 +5,12 @@
     <div class="pt-12  px-3  ">
 
         <div class="container pb-12 flex-col flex justify-center items-center mx-auto">
-            <div
-                class=" mb-4  flex items-center font-bold text-md  font-mono mx-auto bg-gradient-to-b from-stone-800/30 to-stone-900/90 border border-primary/50 text-primary px-6 py-2">
+            <div class="p-0.5  mb-4 bg-gradient-to-tr from-primary via-secondary  to-accent">
+                <div class="  flex items-center font-bold md:text-lg   mx-auto bg-base-100   px-6 py-1">
 
-                Launch
-                week
+                    Launch
+                    week
+                </div>
             </div>
             <h1
                 class="text-center font-display font-extrabold min-sm:text-6xl text-5xl text-pretty min-md:text-7xl  min-lg:text-8xl">
