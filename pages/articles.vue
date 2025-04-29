@@ -1,6 +1,5 @@
     <script lang="ts" setup>
     import { animate, utils } from 'animejs';
-
     const forexTags: string[] = [
         "forex",
         "trading",
@@ -87,7 +86,14 @@
         openTagList()
         return
     }
-
+    const TagListToggler = useTemplateRef<HTMLElement>('tags-container')
+    // closes menu on click outside of menu
+    onClickOutside(TagListToggler, event => {
+        if (taglistIsOpen.value) {
+            taglistIsOpen.value = !taglistIsOpen.value
+            closeTagList()
+        }
+    })
 </script>
 <template>
     <div class="">
@@ -166,7 +172,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button :disabled="taglistIsAnimating" @click="() => toggleTagList()" class="btn  max-sm:btn-sm"
+                    <button ref="tags-container" :disabled="taglistIsOpen" @click="() => openTagList()"
+                        class="btn disabled:!cursor-pointer  max-sm:btn-sm"
                         :class="{ '!btn-neutral !btn-outline hover:!bg-transparent active:!bg-transparent focus:!bg-transparent !text-neutral !shadow-none': taglistIsOpen, '!btn-ghost': !taglistIsOpen }">
                         Tags <span class="badge badge-xs badge-primary">3</span>
                     </button>
@@ -175,9 +182,9 @@
                         <Icon name="ph:x-duotone" size="18" />
                     </button>
                 </div>
-                <div style="height:0;"
+                <div ref="tags-container" style="height:0;"
                     class=" tagslist !px-3  bg-base-100 !border-stone-700/80 flex flex-wrap gap-4 max-h-[20rem] md:max-h-xs md:overflow-y-hidden overflow-y-scroll h-max">
-                    <button class="btn btn-outline btn-md font-medium  " v-for="tag in forexTags">
+                    <button class="btn bg-stone-700/30 btn-md font-medium  " v-for="tag in forexTags">
                         {{ tag }}
                     </button>
                 </div>
