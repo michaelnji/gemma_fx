@@ -183,7 +183,7 @@
                     </button>
                 </div>
                 <div ref="tags-container" style="height:0;"
-                    class=" tagslist !px-3  bg-base-100 !border-stone-700/80 flex flex-wrap gap-4 max-h-[20rem] md:max-h-xs md:overflow-y-hidden overflow-y-scroll h-max">
+                    class=" tagslist !px-3  bg-base-100 !border-stone-700/80 flex flex-wrap gap-4 max-h-[60vh] md:max-h-xs md:overflow-y-hidden overflow-y-scroll h-max">
                     <button class="btn bg-stone-700/30 btn-md font-medium  " v-for="tag in forexTags">
                         {{ tag }}
                     </button>
