@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <div class="  bg-base-100 relative">
+    <div class=" h-dvh bg-base-100 relative">
         <Navbar />
         <div class="">
             <slot></slot>
