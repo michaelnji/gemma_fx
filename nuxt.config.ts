@@ -59,7 +59,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      viewport: "height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0",
+      viewport: "height=device-height, width=device-width, initial-scale=1.0",
     }
   }
 })

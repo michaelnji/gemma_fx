@@ -100,7 +100,7 @@
         </div>
         <!-- settings + blog posts -->
         <div>
-            <div class=" sticky top-0">
+            <div class=" sticky -z-0 top-0">
                 <div class="px-3 py-2 bg-base-100 border-b border-stone-700/80 flex gap-2">
 
                     <div class="dropdown">
