@@ -57,8 +57,9 @@ export default defineNuxtConfig({
     // use ~public/fonts for your font files
     provider: 'local'
   },
-  // anime: {
-  //   composables: true,
-  //   autoImport: true
-  // }
+  app: {
+    head: {
+      viewport: "height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0",
+    }
+  }
 })

@@ -92,7 +92,7 @@
 <template>
     <div class="">
         <div class="inset-0 bg-radial-pattern">
-            <div class="container mx-auto py-24">
+            <div class="container mx-auto py-12 md:py-24">
                 <h1 class="text-7xl font-display text-center">
                     Articles
                 </h1>
@@ -167,7 +167,7 @@
                         </ul>
                     </div>
                     <button :disabled="taglistIsAnimating" @click="() => toggleTagList()" class="btn  max-sm:btn-sm"
-                        :class="{ '!btn-neutral !btn-outline hover:!bg-transparent !text-neutral !shadow-none': taglistIsOpen, '!btn-ghost': !taglistIsOpen }">
+                        :class="{ '!btn-neutral !btn-outline hover:!bg-transparent active:!bg-transparent focus:!bg-transparent !text-neutral !shadow-none': taglistIsOpen, '!btn-ghost': !taglistIsOpen }">
                         Tags <span class="badge badge-xs badge-primary">3</span>
                     </button>
                     <button class="btn btn-outline  ml-auto hidden md:inline-flex btn-sm">
@@ -176,7 +176,7 @@
                     </button>
                 </div>
                 <div style="height:0;"
-                    class=" tagslist !px-3  bg-base-100 !border-stone-700/80 flex flex-wrap gap-2 max-h-[20rem] md:max-h-xs md:overflow-y-hidden overflow-y-scroll h-max">
+                    class=" tagslist !px-3  bg-base-100 !border-stone-700/80 flex flex-wrap gap-4 max-h-[20rem] md:max-h-xs md:overflow-y-hidden overflow-y-scroll h-max">
                     <button class="btn btn-outline btn-md font-medium  " v-for="tag in forexTags">
                         {{ tag }}
                     </button>
