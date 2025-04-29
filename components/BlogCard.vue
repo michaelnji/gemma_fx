@@ -8,14 +8,14 @@
                 #{{ tag }}
             </span>
         </div>
-        <h2 class="font-bold text-2xl text-pretty font-acro">Your fx gurus are scamming you</h2>
+        <h2 class="font-bold text-2xl text-pretty font-display">Your fx gurus are scamming you</h2>
         <div class="flex items-center gap-x-3">
-            <p class="mt-2 text-sm ">12th April 2025</p>
-            <span class="   text-sm  text-accent  flex items-center gap-x-1 ">
+            <p class="mt-2  ">12th April 2025</p>
+            <span class="     text-accent  flex items-center gap-x-1 ">
                 <Icon name="ph:book-bookmark-duotone" size="18" /> Featured
             </span>
         </div>
-        <p class="mt-4 text-stone-200/80 text-pretty text-base ">
+        <p class="mt-4 text-stone-200/80 text-pretty !text-base ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sequi aut illo eos id laborum recusandae
             ullam esse iusto excepturi!
         </p>

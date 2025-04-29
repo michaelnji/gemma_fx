@@ -13,11 +13,9 @@
     <div class=" w-full bg-base-100">
         <div class=" w-screen justify-center     flex items-center ">
             <button @click="() => changeTabs('featured')"
-                class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content  p-4 transition  items-center gap-x-3 col-auto"
+                class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content font-semibold  p-4 transition  items-center-safe gap-x-2 col-auto"
                 :class="{ '!bg-primary !text-primary-content': tab === 'featured' }">
-                <div class="hidden md:inline-flex">
-                    <Icon name="ph:star-duotone" size="30" />
-                </div>
+
                 <div class=" md:hidden">
                     <Icon name="ph:star-duotone" />
                 </div>
@@ -25,11 +23,9 @@
             </button>
             <button @click="() => changeTabs('analysis')" :class="{
                 '!bg-primary !text-primary-content': tab === 'analysis'
-            }" class=" flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content p-4 transition items-center
-                    gap-x-3">
-                <div class="hidden md:inline-flex">
-                    <Icon name="ph:chart-line-up-duotone" size="30" />
-                </div>
+            }" class=" flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content font-semibold p-4 transition items-center
+                    gap-x-2">
+
                 <div class=" md:hidden">
                     <Icon name="ph:chart-line-up-duotone" />
                 </div>
@@ -38,10 +34,8 @@
             <button @click="() => changeTabs('rookies')" :class="{
                 '!bg-primary !text-primary-content': tab === 'rookies'
             }"
-                class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content  p-4 transition  items-center gap-x-3">
-                <div class="hidden md:inline-flex">
-                    <Icon name="ph:baby-duotone" size="30" />
-                </div>
+                class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content font-semibold  p-4 transition  items-center-safe gap-x-2">
+
                 <div class=" md:hidden">
                     <Icon name="ph:baby-duotone" />
                 </div>
@@ -50,10 +44,8 @@
             <button @click="() => changeTabs('software')" :class="{
                 '!bg-primary !text-primary-content': tab === 'software'
             }"
-                class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content  p-4 transition  items-center gap-x-3">
-                <div class="hidden md:inline-flex">
-                    <Icon name="ph:laptop-duotone" size="30" />
-                </div>
+                class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content font-semibold  p-4 transition  items-center-safe gap-x-2">
+
                 <div class=" md:hidden">
                     <Icon name="ph:laptop-duotone" />
                 </div>
@@ -62,12 +54,10 @@
             <button @click="() => changeTabs('tools')" :class="{
                 '!bg-primary !text-primary-content': tab === 'tools'
             }"
-                class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content  p-4 transition  items-center gap-x-3">
-                <div class="hidden md:inline-flex">
-                    <Icon name="ph:toolbox-duotone" size="30" />
-                </div>
+                class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content font-semibold  p-4 transition  items-center-safe gap-x-2">
+
                 <div class=" md:hidden">
-                    <Icon name="ph:toolbox-duotone" />
+                    <Icon name="ph:wrench-duotone" />
                 </div>
                 <p class="hidden md:block text-lg  font-medium"> Tools</p>
             </button>

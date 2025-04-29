@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="F" format="1">
+  <advance width="571"/>
+  <unicode hex="0046"/>
+  <note>
+    F
+  </note>
+  <outline>
+    <contour>
+      <point x="539" y="699" type="curve" smooth="yes"/>
+      <point x="106" y="699" type="line" smooth="yes"/>
+      <point x="83" y="699"/>
+      <point x="64" y="680"/>
+      <point x="64" y="657" type="curve" smooth="yes"/>
+      <point x="64" y="14" type="line" smooth="yes"/>
+      <point x="64" y="6"/>
+      <point x="70" y="0"/>
+      <point x="78" y="0" type="curve" smooth="yes"/>
+      <point x="150" y="0" type="line" smooth="yes"/>
+      <point x="158" y="0"/>
+      <point x="164" y="6"/>
+      <point x="164" y="14" type="curve" smooth="yes"/>
+      <point x="164" y="281" type="line" smooth="yes"/>
+      <point x="164" y="288"/>
+      <point x="170" y="295"/>
+      <point x="178" y="295" type="curve" smooth="yes"/>
+      <point x="489" y="295" type="line" smooth="yes"/>
+      <point x="497" y="295"/>
+      <point x="503" y="301"/>
+      <point x="503" y="308" type="curve" smooth="yes"/>
+      <point x="503" y="371" type="line" smooth="yes"/>
+      <point x="503" y="378"/>
+      <point x="497" y="384"/>
+      <point x="489" y="384" type="curve" smooth="yes"/>
+      <point x="178" y="384" type="line" smooth="yes"/>
+      <point x="170" y="384"/>
+      <point x="164" y="391"/>
+      <point x="164" y="398" type="curve" smooth="yes"/>
+      <point x="164" y="595" type="line" smooth="yes"/>
+      <point x="164" y="603"/>
+      <point x="170" y="609"/>
+      <point x="178" y="609" type="curve" smooth="yes"/>
+      <point x="539" y="609" type="line" smooth="yes"/>
+      <point x="547" y="609"/>
+      <point x="553" y="615"/>
+      <point x="553" y="623" type="curve" smooth="yes"/>
+      <point x="553" y="685" type="line" smooth="yes"/>
+      <point x="553" y="693"/>
+      <point x="547" y="699"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2020-06-14 21:16:05 +0000</string>
+    </dict>
+  </lib>
+</glyph>

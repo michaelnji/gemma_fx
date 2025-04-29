@@ -9,10 +9,10 @@
                 SELL
             </span>
         </div>
-        <h2 class="font-bold text-2xl text-pretty font-acro">GBP/USD</h2>
+        <h2 class="font-bold text-4xl text-pretty font-display">GBP/USD</h2>
         <div class="flex items-center gap-x-3">
-            <p class="mt-2  text-sm ">12th April 2025</p>
-            <span class="   text-sm  text-accent  flex items-center gap-x-1 ">
+            <p class="mt-2 ">12th April 2025</p>
+            <span class="   text-accent  flex items-center gap-x-1 ">
                 <Icon name="ph:chart-line-duotone" size="18" /> Analysis
             </span>
         </div>

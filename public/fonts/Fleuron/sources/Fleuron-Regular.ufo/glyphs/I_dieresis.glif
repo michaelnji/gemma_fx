@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Idieresis" format="1">
+  <advance width="229"/>
+  <unicode hex="00CF"/>
+  <note>
+    Idieresis
+  </note>
+  <outline>
+    <contour>
+      <point x="151" y="699" type="curve" smooth="yes"/>
+      <point x="78" y="699" type="line" smooth="yes"/>
+      <point x="71" y="699"/>
+      <point x="65" y="693"/>
+      <point x="65" y="685" type="curve" smooth="yes"/>
+      <point x="65" y="14" type="line" smooth="yes"/>
+      <point x="65" y="6"/>
+      <point x="71" y="0"/>
+      <point x="78" y="0" type="curve" smooth="yes"/>
+      <point x="151" y="0" type="line" smooth="yes"/>
+      <point x="158" y="0"/>
+      <point x="164" y="6"/>
+      <point x="164" y="14" type="curve" smooth="yes"/>
+      <point x="164" y="685" type="line" smooth="yes"/>
+      <point x="164" y="693"/>
+      <point x="158" y="699"/>
+    </contour>
+    <contour>
+      <point x="204" y="894" type="curve" smooth="yes"/>
+      <point x="173" y="894"/>
+      <point x="148" y="869"/>
+      <point x="148" y="838" type="curve" smooth="yes"/>
+      <point x="148" y="807"/>
+      <point x="173" y="782"/>
+      <point x="204" y="782" type="curve" smooth="yes"/>
+      <point x="235" y="782"/>
+      <point x="260" y="807"/>
+      <point x="260" y="838" type="curve" smooth="yes"/>
+      <point x="260" y="869"/>
+      <point x="235" y="894"/>
+    </contour>
+    <contour>
+      <point x="25" y="894" type="curve" smooth="yes"/>
+      <point x="-6" y="894"/>
+      <point x="-31" y="869"/>
+      <point x="-31" y="838" type="curve" smooth="yes"/>
+      <point x="-31" y="807"/>
+      <point x="-6" y="782"/>
+      <point x="25" y="782" type="curve" smooth="yes"/>
+      <point x="56" y="782"/>
+      <point x="81" y="807"/>
+      <point x="81" y="838" type="curve" smooth="yes"/>
+      <point x="81" y="869"/>
+      <point x="56" y="894"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2020-06-14 21:16:05 +0000</string>
+    </dict>
+  </lib>
+</glyph>

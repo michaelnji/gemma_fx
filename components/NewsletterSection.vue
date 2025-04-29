@@ -9,12 +9,12 @@
                     <h2 class="font-extrabold text-6xl font-mono">
 
                     </h2>
-                    <h1 class=" font-display font-medium min-sm:text-7xl text-5xl text-pretty py-1 ">
+                    <h1 class="  !font-medium font-display text-4xl md:text-5xl text-pretty py-1 ">
                         <b> Premium
                             articles, </b>right in your inbox.
                     </h1>
                     <div class="mt-8">
-                        <div class="flex flex-col gap-3 md:flex-row items-center gap-x-3 w-full max-w-3xl">
+                        <div class="flex flex-col gap-x-3 gap-y-6 md:flex-row items-center gap-x- w-full max-w-3xl">
                             <div>
                                 <label class="input validator ">
                                     <Icon name="ph:user-duotone" />
@@ -29,7 +29,7 @@
                                 </label>
                                 <div class="validator-hint hidden">Enter valid email address</div>
                             </div>
-                            <button class="btn btn-secondary uppercase  max-sm:w-full  ">Join Newsletter</button>
+                            <button class="btn btn-neutral uppercase  max-sm:w-full  ">Join Newsletter</button>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
 <style scoped>
 .boom {
     box-shadow: 5px 5px 0px var(--color-primary),
-        10px 10px 0px var(--color-secondary),
+        10px 10px 0px var(--color-warning),
         15px 15px 0px var(--color-error);
 
 }

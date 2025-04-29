@@ -1,5 +1,7 @@
 <!-- homepage (you can delete this page to start your project) -->
 <script lang="ts" setup>
+import PropReviewSection from '~/components/PropReviewSection.vue';
+
 
 definePageMeta({
     layout: 'default'
@@ -35,6 +37,7 @@ const activeCategory = ref('featured')
             </div>
         </div>
         <div class="md:space-y-48 space-y-24 mt-12 md:mt-24 xl:mt-48">
+            <PropReviewSection />
             <CouponCodeSection />
             <Stats />
             <NewsletterSection class="mb-12" />
