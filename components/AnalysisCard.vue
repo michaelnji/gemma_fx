@@ -3,7 +3,7 @@
 </script>
 <template>
     <div
-        class="p-[1.55px] hover:!bg-gradient-to-tr hover:from-primary hover:via-secondary  hover:to-success  transition duration-300 w-full bg-base-300/80 ">
+        class="p-[1.55px] hover:!bg-gradient-to-tr hover:from-primary hover:via-secondary  hover:to-success  transition duration-300 w-full bg-stone-700/80 ">
         <div class="p-6 bg-base-100 cursor-pointer  w-full">
             <div class=" mb-3 join join-horizontal ">
                 <span class=" join-item badge badge-accent font-bold">Bias </span> <span
