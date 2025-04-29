@@ -57,7 +57,7 @@
                 class="flex hover:bg-primary/80 cursor-pointer w-full justify-center hover:text-primary-content font-semibold  p-4 transition  items-center-safe gap-x-2">
 
                 <div class=" md:hidden">
-                    <Icon name="ph:toolbox-duotone" />
+                    <Icon name="ph:wrench-duotone" />
                 </div>
                 <p class="hidden md:block text-lg  font-medium"> Tools</p>
             </button>
