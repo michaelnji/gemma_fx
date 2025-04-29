@@ -3,7 +3,7 @@
 </script>
 <template>
     <div
-        class=" hover:scale-3d transform-3d hover:scale-[0.98] p-[1.5px] hover:!bg-gradient-to-tr hover:from-primary hover:via-secondary  hover:to-success bg-stone-700/80 transition duration-300 w-full">
+        class="  hover:scale-[0.98] p-[1.5px] hover:!bg-gradient-to-tr hover:from-primary hover:via-secondary  hover:to-success bg-stone-700/80 transition duration-300 w-full">
         <div class="p-6 bg-base-100  cursor-pointer  ">
             <div class="flex mb-3 items-center flex-wrap gap-3">
                 <span v-for="tag in tags" class="badge  font-bold badge-outline font-mono">

@@ -10,7 +10,7 @@
 </script>
 <template>
 
-    <div class=" w-full bg-base-100">
+    <div class=" w-full bg-base-100 ">
         <div class=" w-screen justify-center     flex items-center ">
             <button @click="() => changeTabs('featured')"
                 class="flex hover:bg-accent/80 cursor-pointer w-full justify-center hover:text-accent-content font-semibold  p-4 transition  items-center-safe gap-x-2 col-auto"
@@ -33,8 +33,7 @@
             </button>
             <button @click="() => changeTabs('rookies')" :class="{
     '!bg-accent !text-accent-content': tab === 'rookies'
-}"
-                class="flex hover:bg-accent/80 cursor-pointer w-full justify-center hover:text-accent-content font-semibold  p-4 transition  items-center-safe gap-x-2">
+}" class="flex hover:bg-accent/80 cursor-pointer w-full justify-center hover:text-accent-content font-semibold  p-4 transition  items-center-safe gap-x-2">
 
                 <div class=" md:hidden">
                     <Icon name="ph:baby-duotone" />
