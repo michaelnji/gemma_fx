@@ -91,7 +91,7 @@ function toggleMenu() {
             </div>
 
             <!-- md <-> xs -->
-            <div ref="mobile-menu" class="lg:hidden z-0    w-max">
+            <div ref="mobile-menu" class="lg:hidden   w-max">
                 <button class="btn  btn-ghost  flex justify-between items-center swap swap-rotate "
                     :class="{ 'swap-active': isMenuToggled }" @click="() => {
                         isMenuToggled = !isMenuToggled
@@ -102,7 +102,7 @@ function toggleMenu() {
 
                 </button>
                 <div style="transform:translateX(20rem);"
-                    class="nav-menu-animate border translate-2 border-base-300 absolute right-0     w-max   xl:text-lg font-semibold   bg-base-100   px-3 py-1">
+                    class="nav-menu-animate border translate-2 border-base-300 absolute right-0 !z-[9999]     w-max   xl:text-lg font-semibold   !bg-base-100   px-3 py-1">
                     <ul class="menu px-1 gap-y-3">
                         <li @click="() => {
                             isMenuToggled = false

@@ -8,6 +8,14 @@
             <BlogCard />
             <BlogCard />
             <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
 
         </div>
         <div class="mt-12 mx-auto max-w-xs w-full">
