@@ -106,7 +106,7 @@
         </div>
         <!-- settings + blog posts -->
         <div>
-            <div class=" sticky -z-0 top-0">
+            <div class=" sticky z-1 top-0">
                 <div class="px-3 py-2 bg-base-100 border-b border-stone-700/80 flex gap-2">
 
                     <div class="dropdown">
@@ -175,7 +175,8 @@
                     <button ref="tags-container" :disabled="taglistIsOpen" @click="() => openTagList()"
                         class="btn disabled:!cursor-pointer  max-sm:btn-sm"
                         :class="{ '!btn-neutral !btn-outline hover:!bg-transparent active:!bg-transparent focus:!bg-transparent !text-neutral !shadow-none': taglistIsOpen, '!btn-ghost': !taglistIsOpen }">
-                        Tags <span class="badge badge-xs badge-primary">3</span>
+                        Tags
+                        <Icon name="ph:tag-chevron-duotone" size="18" />
                     </button>
                     <button class="btn btn-outline  ml-auto hidden md:inline-flex btn-sm">
                         Reset
@@ -194,6 +195,8 @@
                 <ArticleList />
             </div>
         </div>
-
+        <div class="my-12 md:mt-24 xl:mt-48">
+            <NewsletterSection />
+        </div>
     </div>
 </template>

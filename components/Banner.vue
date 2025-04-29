@@ -28,7 +28,7 @@
 
 <style scoped>
 .banner-shadow {
-    text-shadow: -5px -0px 2px #658100a9;
+    text-shadow: -5px -0px 2px #817f00a9;
 
 }
 </style>
