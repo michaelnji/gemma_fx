@@ -49,4 +49,5 @@
         --depth: 1;
             --noise: 1;
         }
-        
+
+                                @custom-variant hover (&:hover);
