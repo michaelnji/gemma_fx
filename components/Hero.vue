@@ -34,7 +34,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex flex-col min-md:flex-row gap-x-8">
+                <div class="flex flex-col min-md:flex-row gap-8">
 
 
                     <div class="min-md:w-1/2 p-[1px] bg-gradient-to-tl from-primary via-secondary to-success">

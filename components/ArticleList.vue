@@ -3,19 +3,11 @@
 </script>
 <template>
     <div>
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-4">
+        <div class=" pl-3 z-0 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 place-items-center gap-8">
             <BlogCard />
             <BlogCard />
             <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
+
 
         </div>
         <div class="mt-12 mx-auto max-w-xs w-full">

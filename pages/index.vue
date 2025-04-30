@@ -19,15 +19,15 @@ const activeCategory = ref('featured')
             </div>
         </div>
         <Banner />
-        <div>
-            <div class="sticky top-0 border-b border-stone-700/60">
+        <div class="z-0">
+            <div class="sticky z-10 top-0 border-b border-stone-700/60">
                 <CategoryBar :tab="activeCategory" @category-change="(e) => activeCategory = e" />
             </div>
             <div class="">
                 <!-- Featured posts -->
                 <SectionsFeatured v-if="activeCategory === 'featured'" />
-                <!--Market analysis -->
-                <SectionsAnalysis v-if="activeCategory === 'analysis'" />
+                <!-- Market analysis
+                <SectionsAnalysis v-if="activeCategory === 'analysis'" /> -->
                 <!--Rookies -->
                 <SectionsRookies v-if="activeCategory === 'rookies'" />
                 <!--Software -->

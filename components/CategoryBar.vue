@@ -21,7 +21,7 @@
                 </div>
                 <p class="hidden md:block text-lg  font-medium">Featured</p>
             </button>
-            <button @click="() => changeTabs('analysis')" :class="{
+            <!-- <button @click="() => changeTabs('analysis')" :class="{
     '!bg-accent !text-accent-content': tab === 'analysis'
 }" class=" flex hover:bg-accent/80 cursor-pointer w-full justify-center hover:text-accent-content font-semibold p-4 transition items-center
                     gap-x-2">
@@ -30,7 +30,7 @@
                     <Icon name="ph:chart-line-up-duotone" />
                 </div>
                 <p class="hidden md:block text-lg  font-medium"> Analysis</p>
-            </button>
+            </button> -->
             <button @click="() => changeTabs('rookies')" :class="{
     '!bg-accent !text-accent-content': tab === 'rookies'
 }" class="flex hover:bg-accent/80 cursor-pointer w-full justify-center hover:text-accent-content font-semibold  p-4 transition  items-center-safe gap-x-2">
