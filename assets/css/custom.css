@@ -7,7 +7,7 @@
 
 [data-theme='gemma'] {
     .bg-radial-pattern {
-        background: radial-gradient(rgba(187, 241, 99, 0.158) 1px, transparent 1px);
+        background: radial-gradient(rgba(255, 255, 255, 0.089) 1px, transparent 1px);
         background-size: 20px 20px;
     }
 
