@@ -107,10 +107,10 @@
         <!-- settings + blog posts -->
         <div>
             <div class=" sticky z-1 top-0">
-                <div class="px-3 py-2 bg-base-100 border-b border-stone-700/80 flex gap-2">
+                <div class=" py-2 bg-base-100 border-b border-stone-700/80 flex px-3 ">
 
                     <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-soft max-sm:btn-sm m-1">Sort by
+                        <div tabindex="0" role="button" class="btn btn-soft max-sm:btn-sm !px-3 gap-x-1 m-1">Sort by
                             <Icon name="solar:alt-arrow-down-linear" />
                         </div>
                         <ul tabindex="0"
@@ -137,7 +137,7 @@
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-soft max-sm:btn-sm m-1">Topics
+                        <div tabindex="0" role="button" class="btn btn-soft max-sm:btn-sm !px-3 gap-x-1 m-1">Topics
                             <Icon name="solar:alt-arrow-down-linear" />
                         </div>
                         <ul tabindex="0"
@@ -173,7 +173,7 @@
                         </ul>
                     </div>
                     <button ref="tags-container" :disabled="taglistIsOpen" @click="() => openTagList()"
-                        class="btn btn-soft disabled:!cursor-pointer  max-sm:btn-sm"
+                        class="btn btn-soft disabled:!cursor-pointer  max-sm:btn-sm !px-3 gap-x-1"
                         :class="{ '!btn-neutral !btn-outline hover:!bg-transparent active:!bg-transparent focus:!bg-transparent !text-neutral !shadow-none': taglistIsOpen, '!btn-ghost': !taglistIsOpen }">
                         Tags
                         <Icon name="ph:tag-duotone" size="18" />
@@ -191,7 +191,7 @@
                 </div>
             </div>
             <!-- articles -->
-            <div class="p-3 pt-6">
+            <div class="p-3 pt-12">
                 <ArticleList />
             </div>
         </div>
