@@ -26,8 +26,8 @@ const activeCategory = ref('featured')
             <div class="">
                 <!-- Featured posts -->
                 <SectionsFeatured v-if="activeCategory === 'featured'" />
-                <!--Market analysis -->
-                <SectionsAnalysis v-if="activeCategory === 'analysis'" />
+                <!-- Market analysis
+                <SectionsAnalysis v-if="activeCategory === 'analysis'" /> -->
                 <!--Rookies -->
                 <SectionsRookies v-if="activeCategory === 'rookies'" />
                 <!--Software -->

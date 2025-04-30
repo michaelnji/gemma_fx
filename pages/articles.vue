@@ -173,7 +173,7 @@
                         </ul>
                     </div>
                     <button ref="tags-container" :disabled="taglistIsOpen" @click="() => openTagList()"
-                        class="btn disabled:!cursor-pointer  max-sm:btn-sm"
+                        class="btn btn-soft disabled:!cursor-pointer  max-sm:btn-sm"
                         :class="{ '!btn-neutral !btn-outline hover:!bg-transparent active:!bg-transparent focus:!bg-transparent !text-neutral !shadow-none': taglistIsOpen, '!btn-ghost': !taglistIsOpen }">
                         Tags
                         <Icon name="ph:tag-duotone" size="18" />
