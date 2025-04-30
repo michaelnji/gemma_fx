@@ -5,11 +5,12 @@
     <div class="pt-12  px-3  ">
 
         <div class="container pb-12 flex-col flex justify-center items-center mx-auto">
-            <div class="p-[1px]  mb-4 bg-gradient-to-tr from-primary via-secondary  to-primary">
-                <div class="  flex items-center font-bold    mx-auto bg-base-100   px-6 py-1">
 
-                    We're Launching
-                </div>
+            <div
+                class="  flex items-center font-bold  mb-4 border border-stone-700/40 text-primary  mx-auto bg-base-300   px-6 py-1">
+
+                We're Launching
+
             </div>
             <h1
                 class="text-center font-display font-extrabold min-sm:text-6xl text-5xl text-pretty min-md:text-7xl  min-lg:text-8xl">
@@ -18,7 +19,7 @@
                     resource</span> for forex trading excellence
             </h1>
             <div class="max-w-3xl mt-8 w-full flex flex-col justify-center items-center gap-8">
-                <div class="mt-3 w-full  min-md:w-3/4 pb-[1px] bg-gradient-to-tr from-primary via-secondary to-success">
+                <div class="mt-3 w-full  min-md:w-3/4 p-[1px] bg-gradient-to-tr from-primary via-secondary to-success">
                     <div class=" p-6   bg-base-100 ">
                         <div class="">
                             <Icon name="ph:chart-line-duotone" size="40" class="text-primary" />
@@ -36,7 +37,7 @@
                 <div class="flex flex-col min-md:flex-row gap-x-8">
 
 
-                    <div class="min-md:w-1/2 pb-[1px] bg-gradient-to-tl from-primary via-secondary to-success">
+                    <div class="min-md:w-1/2 p-[1px] bg-gradient-to-tl from-primary via-secondary to-success">
 
                         <div class=" p-6   bg-base-100  w-full ">
                             <div class="">
@@ -52,7 +53,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="min-md:w-1/2 pb-[1px] bg-gradient-to-bl from-primary via-secondary to-success">
+                    <div class="min-md:w-1/2 p-[1px] bg-gradient-to-bl from-primary via-secondary to-success">
 
                         <div class=" p-6   bg-base-100  w-full ">
                             <div class="">

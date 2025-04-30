@@ -98,7 +98,7 @@
 <template>
     <div class="">
         <div class="inset-0 bg-radial-pattern">
-            <div class="container mx-auto py-12 md:py-24">
+            <div class="container mx-auto py-12 md:pt-24">
                 <h1 class="text-7xl font-display text-center">
                     Articles
                 </h1>
@@ -176,7 +176,7 @@
                         class="btn disabled:!cursor-pointer  max-sm:btn-sm"
                         :class="{ '!btn-neutral !btn-outline hover:!bg-transparent active:!bg-transparent focus:!bg-transparent !text-neutral !shadow-none': taglistIsOpen, '!btn-ghost': !taglistIsOpen }">
                         Tags
-                        <Icon name="ph:tag-chevron-duotone" size="18" />
+                        <Icon name="ph:tag-duotone" size="18" />
                     </button>
                     <button class="btn btn-outline  ml-auto hidden md:inline-flex btn-sm">
                         Reset

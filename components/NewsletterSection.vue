@@ -29,7 +29,7 @@
                                 </label>
                                 <div class="validator-hint hidden">Enter valid email address</div>
                             </div>
-                            <button class="btn btn-neutral uppercase  max-sm:w-full  ">Join Newsletter</button>
+                            <button class="btn btn-accent uppercase  max-sm:w-full  ">Join Newsletter</button>
                         </div>
                     </div>
                 </div>
@@ -40,8 +40,8 @@
 <style scoped>
 .boom {
     box-shadow: 5px 5px 0px var(--color-primary),
-        10px 10px 0px var(--color-warning),
-        15px 15px 0px var(--color-error);
+        10px 10px 0px var(--color-secondary),
+            15px 15px 0px var(--color-success);
 
 }
 </style>

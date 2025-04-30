@@ -64,12 +64,12 @@ function toggleMenu() {
                         :class="{ '!bg-primary  !text-primary-content': route.path === '/articles' }">
                         <NuxtLink to="/articles">Articles</NuxtLink>
                     </li>
-                    <li class=" rounded-none hover:bg-base-100/10  hover:text-base-content transition duration-150"
+                    <!-- <li class=" rounded-none hover:bg-base-100/10  hover:text-base-content transition duration-150"
                         :class="{ '!bg-primary  !text-primary-content': route.path === '/tutorials' }">
                         <NuxtLink to="/tutorials">Tutorials
 
                         </NuxtLink>
-                    </li>
+                    </li> -->
                     <li class=" rounded-none hover:bg-base-100/10  hover:text-base-content transition duration-150"
                         :class="{ '!bg-primary  !text-primary-content': route.path === '/prop-firms' }">
                         <NuxtLink to="/prop-firms">Prop firm reviews</NuxtLink>
@@ -119,7 +119,7 @@ function toggleMenu() {
                             :class="{ '!bg-primary  !text-primary-content': route.path === '/articles' }">
                             <NuxtLink to="/articles">Articles</NuxtLink>
                         </li>
-                        <li @click="() => {
+                        <!-- <li @click="() => {
                             isMenuToggled = false
                             toggleMenu()
 }" class=" rounded-none hover:bg-base-100/10  text-base hover:text-base-content transition duration-150"
@@ -127,7 +127,7 @@ function toggleMenu() {
                             <NuxtLink to="/tutorials">Tutorials
 
                             </NuxtLink>
-                        </li>
+                        </li> -->
                         <li @click="() => {
                             isMenuToggled = false
                             toggleMenu()
