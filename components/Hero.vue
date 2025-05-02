@@ -29,8 +29,8 @@
                         </h3>
                         <p class="text-base-content/80">
 
-                            Technical analysis, fundamentals, psychology, we write weekly articles
-                            helping you progressa as a trader.
+                            Technical analysis, fundamentals, psychology, I write bi-weekly articles
+                            helping you progress as a trader.
                         </p>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                             </h3>
                             <p class="text-base-content/80">
 
-                                Get honest reviews of prop firms we have workedwith,so you know what to expect
+                                Get honest reviews of prop firms I have worked with,so you know what to expect from them
 
                             </p>
                         </div>

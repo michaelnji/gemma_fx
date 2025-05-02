@@ -36,7 +36,7 @@ const activeCategory = ref('featured')
                 <SectionsTools v-if="activeCategory === 'tools'" />
             </div>
         </div>
-        <div class="md:space-y-48 space-y-24 mt-12 md:mt-24 xl:mt-48">
+        <div class="md:space-y-56 space-y-24 mt-12 md:mt-24 xl:mt-48">
             <PropReviewSection />
             <CouponCodeSection />
             <Stats />

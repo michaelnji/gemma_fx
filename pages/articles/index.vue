@@ -192,7 +192,7 @@
             </div>
             <!-- articles -->
             <div class="p-3 pt-12">
-                <ArticleList />
+                <ArticleList :amount="20" category="Featured" post_type="Article" :show-more-button="false" />
             </div>
         </div>
         <div class="my-12 md:mt-24 xl:mt-48">

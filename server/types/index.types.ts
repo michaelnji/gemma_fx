@@ -1,10 +1,10 @@
-// Define your types here (return types from API calls)
+import { Post } from "./blog.type";
 
 export type StatusCode = 200 | 400 | 404 | 403 | 500 | 401;
 export type ErrorCodes = 400 | 404 | 403 | 500 | 401;
 
 //make sure to add your defined types to ServerData
-export type ServerData = null // | YourTYpe
+export type ServerData = Post | Post[] // | YourTYpe
 export interface ServerResponse<
     Status extends StatusCode,
     Data extends ServerData,
