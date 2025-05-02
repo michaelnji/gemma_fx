@@ -64,3 +64,33 @@ export const buildPostSummarizedQuery = (post_type: string, category: string) =>
 }`;
 
 }
+export const buildPostBySlugQuery = (slug: string) => {
+  return `*[_type == "post" && slug.current == "${slug}"][0]{
+        _id,
+      post_type->{title},
+     
+      excerpt,
+      "authorInfo": author-> {
+        slug,
+        name,
+        bio,
+        "imageUrl": image.asset->url,
+        twitter
+      },
+      "category": category->{
+        title,
+        icon
+      },
+      "tags": tags[]->{
+        title,
+        description
+      },
+      publishedAt,
+      slug,
+      title,
+      _updatedAt,
+      "imageUrl": mainImage.asset->url,
+    body
+    }`;
+}
+

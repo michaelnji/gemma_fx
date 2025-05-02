@@ -218,7 +218,10 @@
                                 class="  indicator-item indicator-top bg-primary size-3  badge-primary font-bold rounded-full"></span>
                         </button>
                     </div>
-                    <button class="btn btn-outline  ml-auto hidden md:inline-flex btn-sm">
+                    <button @click="() => {
+                        currentTag = 'all'
+                        currentTopic = 'all'
+                    }" class="btn btn-outline  ml-auto hidden md:inline-flex btn-sm">
                         Reset
                         <Icon name="ph:x-duotone" size="18" />
                     </button>

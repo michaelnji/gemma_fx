@@ -49,4 +49,5 @@ export interface Post {
         current: string;
         _type: string;
     };
+    body: unknown[]
 }

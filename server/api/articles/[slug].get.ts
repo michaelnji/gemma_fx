@@ -1,12 +1,18 @@
+import { buildPostBySlugQuery } from "~/lib/queryManager"
+import type { Post } from "~/server/types/blog.type"
 
 
 export default defineEventHandler(async (event) => {
 
     try {
         const config = useRuntimeConfig()
-        const id = getRouterParam(event, 'id')
-        if (id) {
-
+        const slug = getRouterParam(event, 'slug')
+        if (slug) {
+            const query = buildPostBySlugQuery(slug)
+            const sanity = useSanity()
+            const resp: Post = await sanity.fetch(query)
+            setResponseStatus(event, 200)
+            return sendServerResponse(200, 'sucess', resp)
         }
 
         setResponseStatus(event, 404, 'Article not found')
