@@ -1,5 +1,5 @@
     <script lang="ts" setup>
-    import img from '../assets/images/pf.png'
+    import img from '../assets/images/pf.png';
 </script>
 <template>
     <div class="">
@@ -149,8 +149,8 @@
                 <div class="mt-8">
                     <div class="font-medium p-4 max-w-sm  bg-primary/10 text-primary w-max mx-auto">
                         <Icon name="ph:info-duotone" size="24" />
-                        <p class="mt-3">Every time you use a code or link from our list, we get a small commision. This
-                            helps us keep Gemma_fx going</p>
+                        <p class="mt-3">Every time you use a code or link from my list, I get a small commision. This
+                            helps me to keep Gemma_fx going</p>
                     </div>
                 </div>
                 <div class="my-12 md:mt-24 xl:mt-48">

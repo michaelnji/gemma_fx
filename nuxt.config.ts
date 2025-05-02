@@ -16,8 +16,11 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@pinia/nuxt',
     // '@unocss/nuxt',
-    '@vueuse/nuxt',
     // '@hypernym/nuxt-anime'
+    '@vueuse/nuxt',
+    // '@nuxtjs/strapi',
+    // 'nuxt-strapi-blocks-renderer',
+    '@nuxtjs/sanity'
   ],
   icon: {
     customCollections: [
@@ -61,5 +64,15 @@ export default defineNuxtConfig({
     head: {
       viewport: "height=device-height, width=device-width, initial-scale=1.0",
     }
+  },
+  runtimeConfig: {
+    sanityToken: ''
+  },
+  sanity: {
+    projectId: '1h1ec0mp',
+    dataset: 'production',
+    useCdn: false,
+    apiVersion: '2023-12-13',
+    token: process.env.NUXT_SANITY_TOKEN,
   }
 })
