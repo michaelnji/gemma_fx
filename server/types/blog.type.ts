@@ -1,3 +1,6 @@
+export type Tag = {
+    title: string
+}
 export interface Post {
     imageUrl: string;
     excerpt: string;
@@ -15,10 +18,10 @@ export interface Post {
             _type: string;
             style: string;
             _key: string;
-            markDefs: any[];
+            markDefs: unknown[];
             children: Array<{
                 _type: string;
-                marks: any[];
+                marks: unknown[];
                 text: string;
                 _key: string;
             }>;

@@ -1,5 +1,5 @@
 import { buildPostSummarizedQuery, queries } from "~/lib/queryManager"
-import { Post } from "~/server/types/blog.type"
+import type { Post } from "~/server/types/blog.type"
 
 
 export default defineEventHandler(async (event) => {
@@ -8,10 +8,10 @@ export default defineEventHandler(async (event) => {
         const config = useRuntimeConfig()
         const body = await readBody<{ post_type: string, category: string }>(event)
         const query = buildPostSummarizedQuery(body.post_type, body.category)
-        console.log(query)
+
         const sanity = useSanity()
         const resp: Post[] = await sanity.fetch(query)
-        console.log(resp)
+
         setResponseStatus(event, 200)
         return sendServerResponse(200, 'sucess', resp)
     } catch (error) {

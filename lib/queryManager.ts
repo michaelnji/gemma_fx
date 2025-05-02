@@ -29,38 +29,28 @@ export const queries = {
     body
   `,
     authors: `*[_type == "author"]`,
-    tags: `*[_type == "tag"]`,
+  tags: `*[_type == "tag"]{title}`,
     categories: `*[_type == "category"]`,
     postsSummary: `
     *[_type == "post"] | order(publishedAt desc) {
       _id,
-      post_type->{title},
-      excerpt,
-     
-      "authorInfo": author-> {
-        slug,
-        name,
-        bio,
-        "imageUrl": image.asset->url
-      },
-      "tags": tags[]->{title},
-      publishedAt,
-      slug,
-      "category": category->{
-        title,
-        icon
-      },
-      title,
-      _updatedAt,
-      "imageUrl": mainImage.asset->url
+    post_type->{title},
+    excerpt,
+    "authorInfo":author-> {slug,name,bio,"imageUrl":image.asset->url},
+    "tags":tags[]->{title},
+    publishedAt,
+    slug,
+    "category":category->{title},
+    title,
+    _updatedAt,
+    "imageUrl": mainImage.asset->url
     }
   `
 };
 
 export const buildPostSummarizedQuery = (post_type: string, category: string) => {
     return `*[_type == "post" && post_type->title == "${post_type}" && category->title == "${category}"] | order(publishedAt desc){
-    _id,
-   
+    _id,   
     post_type->{title},
     excerpt,
     "authorInfo":author-> {slug,name,bio,"imageUrl":image.asset->url},

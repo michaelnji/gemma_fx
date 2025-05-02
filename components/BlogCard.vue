@@ -19,7 +19,7 @@
                         </h2>
                         <span
                             class="badge badge-primary border border-primary-content font-bold sh-badge transition-all flex items-center gap-x-2">{{
-                                details.category.title }}
+    details.category.title }}
                             <!-- <Icon :name="details.category.icon" size="18" /> -->
                         </span>
                     </div>
@@ -33,9 +33,9 @@
 
                         <div class="flex py-3 justify-between items-center gap-x-2">
 
-                            <div class="flex gap-3  items-center">
+                            <div class="flex gap-1  items-center">
                                 <div v-for="tag, k in details.tags">
-                                    <span v-if="k < 2" class=" badge  font-mono">#{{
+                                    <span v-if="k < 2" class=" badge bg-base-300  font-mono">#{{
                                         tag.title }}</span>
                                     <span v-if="details.tags.length > 2" class=" badge  font-mono">+{{
                                         details.tags.length -
