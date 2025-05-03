@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <div class="  bg-base-100 relative">
+    <div class=" w-screen !overflow-x-hidden   bg-base-100 relative">
         <Navbar class="!z-2" />
         <div class="">
             <slot></slot>

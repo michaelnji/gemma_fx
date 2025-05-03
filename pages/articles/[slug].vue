@@ -73,7 +73,7 @@ onMounted(async () => {
                         class="flex py-1 px-2 bg-base-300 lg:bg-base-200 gap-x-3 items-center-safe">
                         <Icon name="ph:calendar-dot-duotone" class="text-primary" />
                         <p class="font-mono font-extrabold md:text-lg">
-                            2nd May 2025
+                            <NuxtTime :datetime="post.publishedAt" year="numeric" month="long" day="numeric" />
                         </p>
                     </div>
 
