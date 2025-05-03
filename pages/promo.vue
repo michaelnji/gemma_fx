@@ -6,7 +6,7 @@
         <div class="inset-0 bg-radial-pattern px-6">
             <div class="container mx-auto py-12 md:pt-24">
 
-                <h1 class="font-extrabold text-center text-4xl lg:text-6xl font-display ">
+                <h1 class="font-extrabold text-center text-5xl lg:text-6xl font-display ">
                     Affiliate <span
                         class="bg-clip-text bg-gradient-to-t from-secondary-content via-secondary  to-accent text-transparent ">
                         Promo codes</span>

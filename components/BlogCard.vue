@@ -14,7 +14,7 @@
                     class=" w-full border-5  border-base-300 duration-300 cursor-pointer  transition-all md:hover:-translate-3 -translate-2  group ">
                     <div
                         class="p-3 bg-base-200 text-base-content border-b-4 border-base-300 flex justify-between items-center gap-x-2">
-                        <h2 class="font-display text-xl">
+                        <h2 class="font-display font-bold text-xl">
                             {{ details.post_type.title }}
                         </h2>
                         <span
@@ -40,7 +40,7 @@
                                     <span v-if="details.tags.length > 2" class=" badge  font-mono">+{{
                                         details.tags.length -
                                         2
-                                    }}</span>
+}}</span>
                                 </div>
                             </div>
 
@@ -48,12 +48,15 @@
                     </div>
                     <div
                         class="p-6 border-t-4 group-hover:border-base-300 transition-all border-base-300/80 border-dashed bg-base-100 text-base-content flex items-center justify-between gap-x-3">
-                        <div class="avatar">
-                            <div class=" w-12 rounded-full">
-                                <img :src="details.authorInfo.imageUrl" />
+                        <div class="flex items-center gap-3">
+                            <div class="avatar">
+                                <div class=" w-12 rounded-full">
+                                    <img :src="details.authorInfo.imageUrl" />
+                                </div>
                             </div>
+                            <span class="text-lg text-secondary">{{ details.authorInfo.name }}</span>
                         </div>
-                        <div class="flex gap-x-3 items-center-safe">
+                        <!-- <div class="flex gap-x-3 items-center-safe">
                             <div class="flex gap-x-2 items-center">
                                 <Icon name="ph:eye-duotone" /> <span class="font-bold font-mono">24.0K</span>
                             </div>
@@ -61,7 +64,7 @@
                                 <Icon name="ph:heart-fill" class="text-primary" /> <span
                                     class="font-bold font-mono">2.6K</span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
