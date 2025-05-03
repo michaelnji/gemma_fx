@@ -52,10 +52,10 @@ onMounted(async () => {
 
                 <div
                     class="py-6 w-full mt-3 border-t-4 group-hover:border-base-300 transition-all border-base-300/80 border-dashed  flex flex-wrap items-center lg:gap-12 gap-y-6 gap-x-6">
-                    <div class="skeleton  bg-base-300 lg:bg-base-200 rounded-full size-8 md:size-12 art"
+                    <div class="skeleton  bg-base-300 lg:bg-base-200 rounded-full size-10 md:size-12 art"
                         v-if="isLoading"></div>
                     <div v-if="!isLoading && post" class="avatar">
-                        <div class=" w-8 md:w-12 rounded-full border-2 border-stone-50 art">
+                        <div class=" w-10 md:w-12 rounded-full border-2 border-stone-50 art">
                             <img :src="post?.authorInfo.imageUrl" />
                         </div>
                     </div>
@@ -111,7 +111,7 @@ onMounted(async () => {
                 </div>
                 <div v-if="!isLoading && post" class="mt-8 md:p-6  md:border-6 border-dashed border-base-300">
                     <div
-                        class="!min-w-full   prose-p:!min-w-full  prose prose-xl md:!prose-2xl prose-img:!my-0  prose-invert prose-stone prose-headings:font-extrabold prose-headings prose-pre:!p-0 prose-pre:whitespace-pre-wrap prose-p:text-pretty prose-pre:!bg-inherit prose-pre:!text-lg md:prose-pre:!text-xl lg:prose-pre:!text-2xl  border-b-2 dark:border-gray-700 pb-10">
+                        class="!min-w-full   prose-p:!min-w-full  prose prose-xl md:!prose-2xl prose-img:!my-0  prose-invert prose-stone prose-headings:font-extrabold prose-headings prose-pre:!p-0 prose-pre:whitespace-pre-wrap prose-p:text-pretty prose-pre:!bg-inherit prose-pre:!text-lg md:prose-pre:!text-xl lg:prose-pre:!text-2xl  border-b-2 dark:border-base-200 pb-10">
                         <PortableText v-if="post && post.body" :value="post?.body as any[]" :components="{
                             types: {
                                 // code: CodeBlock,
@@ -141,10 +141,33 @@ onMounted(async () => {
                     </div>
                 </div>
             </div>
-            <div class="lg:w-2/5 mt-12 lg:mt-0">
-                <div class="w-full h-48 bg-base-300 lg:bg-base-200">
+            <div class="lg:w-2/5 mt-12 lg:mt-0 ">
+                <div class="sticky top-16">
+                    <div v-if="isLoading" class="w-full  h-48 skeleton bg-base-300 lg:bg-base-200 "></div>
+                    <div v-if="!isLoading && post"
+                        class="w-full p-6  border-6 border-base-300 border-dashed text-secondary ">
+                        <div class="flex items-center gap-x-4">
+                            <div class="avatar">
+                                <div class=" size-12 md:size-16 rounded-full border-2 border-stone-50 art">
+                                    <img :src="post?.authorInfo.imageUrl" />
+                                </div>
+                            </div>
+                            <div class="pl-1">
+                                <h2 class="text-xl md:text-3xl font-bold font-display">
+                                    {{ post?.authorInfo.name }}
+                                </h2>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-base-content/80">
 
 
+                            <PortableText v-if="post && post.body" :value="post?.authorInfo.bio as any[]" :components="{
+                            }" />
+
+
+                        </p>
+
+                    </div>
                 </div>
             </div>
 
