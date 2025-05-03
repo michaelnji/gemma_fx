@@ -1,17 +1,128 @@
 <script setup lang="ts">
 import type { Post } from '~/server/types/blog.type';
 import type { ServerResponse, StatusCode } from '~/server/types/index.types';
-
+import { PortableText } from '@portabletext/vue';
+import Hint from '~/components/Hint.vue';
+import Quote from '~/components/Quote.vue';
+import Gotcha from '~/components/Gotcha.vue';
+import CustomHeading from '~/components/CustomHeading.vue';
+import BlogImage from '~/components/BlogImage.vue';
+import SoftwareBlock from '~/components/SoftwareBlock.vue';
+definePageMeta({
+    layout: 'blog'
+})
 const route = useRoute()
+const post = ref<Post>()
 onMounted(async () => {
     const resp = await $fetch<ServerResponse<StatusCode, Post>>(`/api/articles/${route.params.slug}`)
-    if (resp.ok) console.log(resp.data)
+    if (resp.ok && resp.data) post.value = resp.data
 
 })
 </script>
 
 <template>
-    <div>
+    <div class="min-h-screen">
+        <div class="inset-0 bg-radial-pattern px-6">
+            <div class="container xl:max-w-[100rem] mx-auto py-12 md:pt-24">
+                <div class="p-[3px] bg-gradient-to-tl from-primary via-secondary to-success w-max mb-6">
 
+                    <div class=" bg-base-100 px-6 py-2 xl:text-lg font-extrabold font-mono ">
+                        <!-- <Icon name="ph:users-three-duotone" size="70" /> -->
+                        {{ post?.category.title }}
+
+
+                    </div>
+                </div>
+                <h1 class=" lg:text-7xl  md:text-6xl text-4xl text-pretty xl:text-8xl font-display font-bold">
+                    {{ post?.title }}
+                </h1>
+
+                <div
+                    class="py-6 w-full mt-3 border-t-4 group-hover:border-base-300 transition-all border-base-300/80 border-dashed bg-base-100  flex flex-wrap items-center lg:gap-12 gap-y-6 gap-x-6">
+                    <div class="avatar">
+                        <div class=" w-8 md:w-12 rounded-full border-2 border-stone-50 art">
+                            <img :src="post?.authorInfo.imageUrl" />
+                        </div>
+                    </div>
+                    <div class="flex gap-x-3 items-center-safe">
+                        <div v-for="tag, k in post?.tags">
+                            <span class=" badge md:badge-lg  bg-base-300  font-mono">#{{
+                                tag.title }}</span>
+                        </div>
+                    </div>
+                    <div class="flex py-1 px-2 bg-base-300 gap-x-3 items-center-safe">
+                        <Icon name="ph:calendar-dot-duotone" class="text-primary" />
+                        <p class="font-mono font-extrabold md:text-lg">
+                            2nd May 2025
+                        </p>
+                    </div>
+
+                    <div class=" lg:ml-auto flex gap-x-3 items-center-safe">
+                        <div class="flex gap-x-2 items-center">
+                            <Icon name="ph:eye-duotone" /> <span
+                                class="font-bold font-mono text-sm md:text-base">24.0K</span>
+                        </div>
+                        <div class="flex gap-x-2 items-center">
+                            <Icon name="ph:heart-fill" class="text-primary" /> <span
+                                class="font-bold font-mono text-sm md:text-base">2.6K</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="lg:pt-12 w-full xl:max-w-[110rem] px-6 lg:px-8 xl:px-16 mx-auto lg:flex gap-x-12">
+            <div class="lg:w-3/5">
+                <div class="p-[3px] bg-gradient-to-tl from-error via-primary to-success  mb-6">
+
+                    <img :src="post?.imageUrl" :alt="post?.title" class="w-full">
+                </div>
+                <div class="mt-8 md:p-6  md:border-6 border-dashed border-base-300">
+                    <div
+                        class="!min-w-full   prose-p:!min-w-full  prose prose-xl md:!prose-2xl prose-img:!my-0  prose-invert prose-stone prose-headings:font-extrabold prose-headings prose-pre:!p-0 prose-pre:whitespace-pre-wrap prose-p:text-pretty prose-pre:!bg-inherit prose-pre:!text-lg md:prose-pre:!text-xl lg:prose-pre:!text-2xl  border-b-2 dark:border-gray-700 pb-10">
+                        <PortableText v-if="post && post.body" :value="post?.body as any[]" :components="{
+                            types: {
+                                // code: CodeBlock,
+                                image: BlogImage,
+                                img: BlogImage
+                            },
+                            marks: {
+                                // color: ColorBlock,
+                                // code: InlineCodeBlock,
+                                // link: LinkBlog
+                                software: (props) => h(SoftwareBlock, { pt: props.text }),
+                                // software: (_, { slots, }) => h(SoftwareBlock, slots.default?.()),
+                            },
+                            block: {
+                                h1: CustomHeading,
+                                h2: CustomHeading,
+                                h3: CustomHeading,
+                                h4: CustomHeading,
+                                h5: CustomHeading,
+                                h6: CustomHeading,
+                                blockquote: Quote,
+                                hint: Hint,
+                                gotcha: Gotcha,
+                            }
+                        }" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-2/5">
+                <div class="w-full h-48 bg-base-300">
+
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </template>
+<style scoped>
+.art {
+    box-shadow: 2px 2px 0px var(--color-error),
+        5px 5px 0px var(--color-success);
+
+}
+</style>

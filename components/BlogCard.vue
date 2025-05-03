@@ -19,15 +19,15 @@
                         </h2>
                         <span
                             class="badge badge-primary border border-primary-content font-bold sh-badge transition-all flex items-center gap-x-2">{{
-    details.category.title }}
+                            details.category.title }}
                             <!-- <Icon :name="details.category.icon" size="18" /> -->
                         </span>
                     </div>
                     <div class="p-6 bg-base-100 text-base-content">
-                        <h2 class="font-display text-primary text-2xl">
+                        <h2 class="font-display font-bold text-primary text-pretty text-3xl">
                             {{ details.title }}
                         </h2>
-                        <p class="mt-1 opacity-90">
+                        <p class="mt-2 md:text-lg opacity-90">
                             {{ details.excerpt }}
                         </p>
 
@@ -40,7 +40,7 @@
                                     <span v-if="details.tags.length > 2" class=" badge  font-mono">+{{
                                         details.tags.length -
                                         2
-                                        }}</span>
+                                    }}</span>
                                 </div>
                             </div>
 
@@ -49,7 +49,7 @@
                     <div
                         class="p-6 border-t-4 group-hover:border-base-300 transition-all border-base-300/80 border-dashed bg-base-100 text-base-content flex items-center justify-between gap-x-3">
                         <div class="avatar">
-                            <div class="ring-primary ring-offset-base-200 w-8 rounded-full ring-2 ring-offset-2">
+                            <div class=" w-12 rounded-full">
                                 <img :src="details.authorInfo.imageUrl" />
                             </div>
                         </div>

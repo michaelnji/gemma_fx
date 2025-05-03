@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     '@nuxtjs/sanity'
   ],
   icon: {
+
     customCollections: [
       {
         prefix: 'kira',
@@ -66,7 +67,10 @@ export default defineNuxtConfig({
     }
   },
   runtimeConfig: {
-    sanityToken: ''
+    sanityToken: '',
+    public: {
+      sanityProjectId: '1h1ec0mp'
+    }
   },
   sanity: {
     projectId: '1h1ec0mp',

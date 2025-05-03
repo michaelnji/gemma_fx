@@ -24,7 +24,7 @@
                         <div class="">
                             <Icon name="ph:chart-line-duotone" size="40" class="text-primary" />
                         </div>
-                        <h3 class="font-display mt-3 mb-1 font-bold text-xl">
+                        <h3 class=" mt-3 mb-1 font-bold text-xl">
                             Articles on forex trading
                         </h3>
                         <p class="text-base-content/80">
@@ -43,7 +43,7 @@
                             <div class="">
                                 <Icon name="ph:star-duotone" size="40" class="text-secondary" />
                             </div>
-                            <h3 class="font-display mt-3 mb-1 font-bold text-xl">
+                            <h3 class=" mt-3 mb-1 font-bold text-xl">
                                 Prop Firm reviews
                             </h3>
                             <p class="text-base-content/80">
@@ -59,7 +59,7 @@
                             <div class="">
                                 <Icon name="ph:tag-duotone" size="40" class="text-accent" />
                             </div>
-                            <h3 class="font-display mt-3 mb-1 font-bold text-xl">
+                            <h3 class=" mt-3 mb-1 font-bold text-xl">
                                 Get coupons and discounts
                             </h3>
                             <p class="text-base-content/80">

@@ -43,7 +43,7 @@ onMounted(async () => {
         <div v-if="!isLoading && !posts || posts && posts.length < 1"
             class="max-w-5xl relative bg-base-200 overflow-hidden p-6 w-full mx-auto">
             <Icon name="ph:empty-duotone" size="80" class="mb-4" />
-            <h2 class="font-bold  text-3xl md:text-5xl text-base-content/60">Articles in the works...</h2>
+            <h2 class="font-bold font-display  text-4xl md:text-5xl text-base-content/60">Articles in the works...</h2>
             <p class="text-lg md:text-xl mt-3 opacity-50">Please check back later for newly published articles!</p>
             <div
                 class=" mt-8  p-3 bg-primary/10 text-primary max-sm:flex-col max-sm:items-start flex gap-3 md:w-max items-center-safe">

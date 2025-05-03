@@ -9,7 +9,7 @@
                     <h2 class="font-extrabold text-6xl font-mono">
 
                     </h2>
-                    <h1 class="  !font-medium font-display text-4xl md:text-5xl text-pretty py-1 ">
+                    <h1 class="  !font-bold font-display text-4xl md:text-5xl text-pretty py-1 ">
                         <b> Premium
                             articles, </b>right in your inbox.
                     </h1>
@@ -41,7 +41,7 @@
 .boom {
     box-shadow: 5px 5px 0px var(--color-primary),
         10px 10px 0px var(--color-secondary),
-            15px 15px 0px var(--color-success);
+        15px 15px 0px var(--color-success);
 
 }
 </style>

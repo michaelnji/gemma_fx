@@ -8,13 +8,14 @@
 
 /* Define your branding fonts here*/
 @theme {
-    --font-mono: "cnr";
-    --font-display: "Grifter";
-        --font-body: "Actay", "Trap";
-        --font-sans: "Actay", "Trap";
+    --font-mono: "Heming Variable";
+        --font-display: "Akeila";
+        --font-body: "Trap";
+        --font-sans: "Trap";
         --font-acro: "Hanson";
 }
 
+@plugin "@tailwindcss/typography";
 @plugin "daisyui/theme" {
     name: "gemma";
     default: true;
