@@ -9,7 +9,6 @@ const icon = computed(() => {
     if (props.pt.includes('?symbol')) return `https://cdn.brandfetch.io/${props.pt.split('?symbol')[0]}/w/400/h/400/symbol?c=1idunDyDtbQdblaeYsE`
     return `https://cdn.brandfetch.io/${props.pt}/w/400/h/400?c=1idunDyDtbQdblaeYsE`
 })
-console.log(icon.value)
 
 </script>
 <template>

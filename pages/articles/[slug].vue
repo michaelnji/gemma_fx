@@ -13,9 +13,17 @@ definePageMeta({
 })
 const route = useRoute()
 const post = ref<Post>()
+const isLoading = ref(true)
 onMounted(async () => {
-    const resp = await $fetch<ServerResponse<StatusCode, Post>>(`/api/articles/${route.params.slug}`)
-    if (resp.ok && resp.data) post.value = resp.data
+    try {
+        const resp = await $fetch<ServerResponse<StatusCode, Post>>(`/api/articles/${route.params.slug}`)
+        if (resp.ok && resp.data) {
+            isLoading.value = false
+            post.value = resp.data
+        }
+    } catch (error) {
+
+    }
 
 })
 </script>
@@ -24,7 +32,9 @@ onMounted(async () => {
     <div class="min-h-screen">
         <div class="inset-0 bg-radial-pattern px-6">
             <div class="container xl:max-w-[100rem] mx-auto py-12 md:pt-24">
-                <div class="p-[3px] bg-gradient-to-tl from-primary via-secondary to-success w-max mb-6">
+                <div class="skeleton mb-6 bg-base-300 lg:bg-base-200 w-[10rem] h-[2rem]" v-if="isLoading"></div>
+                <div v-if="!isLoading && post"
+                    class="p-[3px] bg-gradient-to-tl from-primary via-secondary to-success w-max mb-6">
 
                     <div class=" bg-base-100 px-6 py-2 xl:text-lg font-extrabold font-mono ">
                         <!-- <Icon name="ph:users-three-duotone" size="70" /> -->
@@ -33,31 +43,41 @@ onMounted(async () => {
 
                     </div>
                 </div>
-                <h1 class=" lg:text-7xl  md:text-6xl text-4xl text-pretty xl:text-8xl font-display font-bold">
+                <div class="skeleton mb-3 bg-base-300 lg:bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
+                <div class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
+                <h1 v-if="!isLoading && post"
+                    class=" lg:text-7xl  md:text-6xl text-5xl text-pretty xl:text-8xl font-display font-bold">
                     {{ post?.title }}
                 </h1>
 
                 <div
-                    class="py-6 w-full mt-3 border-t-4 group-hover:border-base-300 transition-all border-base-300/80 border-dashed bg-base-100  flex flex-wrap items-center lg:gap-12 gap-y-6 gap-x-6">
-                    <div class="avatar">
+                    class="py-6 w-full mt-3 border-t-4 group-hover:border-base-300 transition-all border-base-300/80 border-dashed  flex flex-wrap items-center lg:gap-12 gap-y-6 gap-x-6">
+                    <div class="skeleton  bg-base-300 lg:bg-base-200 rounded-full size-8 md:size-12 art"
+                        v-if="isLoading"></div>
+                    <div v-if="!isLoading && post" class="avatar">
                         <div class=" w-8 md:w-12 rounded-full border-2 border-stone-50 art">
                             <img :src="post?.authorInfo.imageUrl" />
                         </div>
                     </div>
                     <div class="flex gap-x-3 items-center-safe">
-                        <div v-for="tag, k in post?.tags">
-                            <span class=" badge md:badge-lg  bg-base-300  font-mono">#{{
+                        <div v-if="!isLoading && post && post.tags" v-for="tag, k in post?.tags">
+                            <span class=" badge md:badge-lg  bg-base-300 lg:bg-base-200  font-mono">#{{
                                 tag.title }}</span>
                         </div>
+                        <div v-for="i in [1, 2, 3]" class="skeleton  bg-base-300 lg:bg-base-200 w-[4.5rem] h-[2rem]"
+                            v-if="isLoading">
+                        </div>
                     </div>
-                    <div class="flex py-1 px-2 bg-base-300 gap-x-3 items-center-safe">
+                    <div class="skeleton  bg-base-300 lg:bg-base-200 w-[12rem] h-[2.5rem]" v-if="isLoading"></div>
+                    <div v-if="!isLoading && post"
+                        class="flex py-1 px-2 bg-base-300 lg:bg-base-200 gap-x-3 items-center-safe">
                         <Icon name="ph:calendar-dot-duotone" class="text-primary" />
                         <p class="font-mono font-extrabold md:text-lg">
                             2nd May 2025
                         </p>
                     </div>
 
-                    <div class=" lg:ml-auto flex gap-x-3 items-center-safe">
+                    <!-- <div class=" lg:ml-auto flex gap-x-3 items-center-safe">
                         <div class="flex gap-x-2 items-center">
                             <Icon name="ph:eye-duotone" /> <span
                                 class="font-bold font-mono text-sm md:text-base">24.0K</span>
@@ -66,18 +86,30 @@ onMounted(async () => {
                             <Icon name="ph:heart-fill" class="text-primary" /> <span
                                 class="font-bold font-mono text-sm md:text-base">2.6K</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
         </div>
         <div class="lg:pt-12 w-full xl:max-w-[110rem] px-6 lg:px-8 xl:px-16 mx-auto lg:flex gap-x-12">
             <div class="lg:w-3/5">
-                <div class="p-[3px] bg-gradient-to-tl from-error via-primary to-success  mb-6">
+                <div class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[25rem]" v-if="isLoading"></div>
+                <div v-if="!isLoading && post"
+                    class="p-[3px] bg-gradient-to-tl from-error via-primary to-success  mb-6">
 
                     <img :src="post?.imageUrl" :alt="post?.title" class="w-full">
                 </div>
-                <div class="mt-8 md:p-6  md:border-6 border-dashed border-base-300">
+                <div v-if="isLoading" class="space-y-12 mt-8">
+                    <div v-for="i in [1, 2, 3]">
+                        <div class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[5rem]"></div>
+                        <div class="mt-6 space-y-4 w-5/6">
+                            <div v-for="i in [1, 2, 3]" class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[2rem]">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div v-if="!isLoading && post" class="mt-8 md:p-6  md:border-6 border-dashed border-base-300">
                     <div
                         class="!min-w-full   prose-p:!min-w-full  prose prose-xl md:!prose-2xl prose-img:!my-0  prose-invert prose-stone prose-headings:font-extrabold prose-headings prose-pre:!p-0 prose-pre:whitespace-pre-wrap prose-p:text-pretty prose-pre:!bg-inherit prose-pre:!text-lg md:prose-pre:!text-xl lg:prose-pre:!text-2xl  border-b-2 dark:border-gray-700 pb-10">
                         <PortableText v-if="post && post.body" :value="post?.body as any[]" :components="{
@@ -109,8 +141,8 @@ onMounted(async () => {
                     </div>
                 </div>
             </div>
-            <div class="lg:w-2/5">
-                <div class="w-full h-48 bg-base-300">
+            <div class="lg:w-2/5 mt-12 lg:mt-0">
+                <div class="w-full h-48 bg-base-300 lg:bg-base-200">
 
 
                 </div>
