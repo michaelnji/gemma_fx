@@ -1,10 +1,10 @@
-import { Post } from "./blog.type";
+import type { Post, Tag } from "./blog.type";
 
 export type StatusCode = 200 | 400 | 404 | 403 | 500 | 401;
 export type ErrorCodes = 400 | 404 | 403 | 500 | 401;
 
 //make sure to add your defined types to ServerData
-export type ServerData = Post | Post[] // | YourTYpe
+export type ServerData = Post | Post[] | Tag[] // | YourTYpe
 export interface ServerResponse<
     Status extends StatusCode,
     Data extends ServerData,

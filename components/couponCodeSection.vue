@@ -7,7 +7,7 @@
             class="container mx-auto flex flex-col xl:flex-row gap-12 md:gap-24 items-center justify-center xl:justify-between">
             <div class="xl:max-w-4xl ">
                 <h1
-                    class="font-bold  font-display text-4xl md:text-6xl md:text-center text-display text-pretty  xl:text-7xl xl:text-left ">
+                    class="font-bold  font-display text-5xl md:text-7xl md:text-center text-display text-pretty  xl:text-8xl xl:text-left ">
                     Tons of codes to be <span
                         class="bg-clip-text bg-gradient-to-t from-primary via-warning to-secondary text-transparent ">
                         found!

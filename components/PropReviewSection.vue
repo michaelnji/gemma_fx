@@ -142,7 +142,7 @@
             </div>
             <div class="xl:max-w-4xl">
                 <h1
-                    class="font-bold  font-display text-4xl md:text-6xl md:text-center text-display text-pretty  xl:text-7xl lg:text-left ">
+                    class="font-bold  font-display text-5xl md:text-7xl md:text-center text-display text-pretty  xl:text-8xl lg:text-left ">
                     <span
                         class="bg-clip-text bg-gradient-to-t from-secondary-content via-secondary  to-accent text-transparent ">
                         Honest</span>, unbiased and clear reviews

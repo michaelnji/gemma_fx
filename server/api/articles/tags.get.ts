@@ -1,14 +1,13 @@
 import { queries } from "~/lib/queryManager"
-import type { Post } from "~/server/types/blog.type"
+import type { Post, Tag } from "~/server/types/blog.type"
 
 
 export default defineEventHandler(async (event) => {
 
     try {
-        const config = useRuntimeConfig()
-        const query = queries.postsSummary
+        const query = queries.tags
         const sanity = useSanity()
-        const resp: Post[] = await sanity.fetch(query)
+        const resp: Tag[] = await sanity.fetch(query)
         setResponseStatus(event, 200)
         return sendServerResponse(200, 'sucess', resp)
     } catch (error) {
