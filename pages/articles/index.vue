@@ -2,12 +2,14 @@
     import { animate, utils } from 'animejs';
     import type { Post, Tag } from '~/server/types/blog.type';
     import type { ServerResponse, StatusCode } from '~/server/types/index.types';
+    const route = useRoute()
     const tags = ref<Tag[]>()
     const posts = ref<Post[]>()
     // filters
     const currentTopic = ref<string>('all')
     const currentTag = ref<string>('all')
-
+    currentTag.value = route.query.tag ? route.query.tag.toString() ?? 'all' : 'all'
+    currentTopic.value = route.query.topic ? route.query.topic.toString() ?? 'all' : 'all'
     // filters posts
     const processedPosts = computed(() => {
         if (posts.value) {
@@ -84,6 +86,8 @@
     })
     onMounted(async () => {
         try {
+
+
             isLoading.value = true
             const tagResp = await $fetch<ServerResponse<StatusCode, Tag[]>>('/api/articles/tags')
             const postsResp = await $fetch<ServerResponse<StatusCode, Post[]>>('/api/articles/fetch')
@@ -106,7 +110,7 @@
     <div class="">
         <div class="inset-0 bg-radial-pattern">
             <div class="container mx-auto py-12 md:pt-24">
-                <h1 class="text-7xl font-display text-center">
+                <h1 class="text-7xl font-bold font-display text-center">
                     Articles
                 </h1>
             </div>
@@ -272,7 +276,7 @@
                         </div>
                     </div>
                     <div v-if="isLoading"
-                        class=" pl-3 z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 place-items-center gap-12">
+                        class=" px-3 z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 place-items-center gap-12">
                         <div class="w-full" v-for="post in [0, 1, 2, 3]">
                             <div class="w-full h-14 skeleton bg-base-300 lg:bg-base-200"></div>
                             <div class="w-full h-8 mt-4 skeleton bg-base-300 lg:bg-base-200"></div>

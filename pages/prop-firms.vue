@@ -6,7 +6,7 @@
         <div class="inset-0 bg-radial-pattern px-6">
             <div class="container mx-auto py-12 md:pt-24">
 
-                <h1 class="font-extrabold text-center text-4xl lg:text-6xl font-display ">
+                <h1 class="font-extrabold text-center text-6xl lg:text-6xl font-display ">
                     Prop firm <span
                         class="bg-clip-text bg-gradient-to-t from-secondary-content via-secondary  to-accent text-transparent ">
                         Reviews</span>
@@ -17,7 +17,7 @@
             <div class="p-[1px] bg-gradient-to-bl from-primary via-secondary  to-success">
 
                 <div class=" bg-base-200 p-6 ">
-                    <h1 class="t font-display font-medium text-2xl md:text-3xl text-pretty text-primary ">
+                    <h1 class="t font-display font-bold text-2xl md:text-3xl text-pretty text-secondary ">
                         Featured
                     </h1>
                     <div class="mt-4 space-y-2">
@@ -60,7 +60,7 @@
         </div>
         <div>
             <div class="px-6 container mx-auto !pt-12 md:pt-48">
-                <h1 class="mb-6 font-display font-medium text-2xl md:text-3xl text-pretty ">
+                <h1 class="mb-6 font-display font-bold text-3xl md:text-4xl text-pretty ">
                     Our Reviews
                 </h1>
                 <div class="overflow-x-auto !w-full ">

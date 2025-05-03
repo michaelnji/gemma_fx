@@ -6,7 +6,7 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div class=" cursor-bounds !font-medium text-base w-screen !overflow-x-hidden !h-dvh " data-theme="gemma">
+  <div class=" cursor-bounds !font-medium text-base" data-theme="gemma">
 
     <NuxtLayout>
       <div>

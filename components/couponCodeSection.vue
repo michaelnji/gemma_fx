@@ -60,16 +60,16 @@
                         class="absolute top-3 -left-16 size-16 rounded shadow-xl bg-secondary shadow-secondary transform rotate-[135deg]  z-2">
                     </div>
                     <div
-                        class="absolute bottom-3 -right-3 size-16 rounded shadow-xl bg-accent shadow-accent transform rotate-[135deg] z-1">
+                        class="absolute bottom-3 -right-3 size-16 rounded shadow-xl bg-success shadow-success transform rotate-[135deg] z-1">
                     </div>
                     <div
                         class="absolute bottom-3 -right-16 size-16 rounded shadow-xl bg-neutral shadow-neutral transform -rotate-[135deg]  z-2">
                     </div>
                     <h2
-                        class="text-9xl text-base-content/20 transform rotate-90  font-display absolute top-1/2 right-1/2 ">
+                        class="text-9xl text-base-content/20 transform rotate-90  font-bold absolute top-1/2 right-2/4 ">
                         W2025</h2>
                     <h2
-                        class="text-9xl text-base-content/20 transform rotate-90  font-display absolute bottom-1/2 left-1/2 ">
+                        class="text-9xl text-base-content/20 transform rotate-90  font-bold absolute bottom-1/2 left-1/2 ">
                         GEM10</h2>
                     <div class="mockup-phone-camera"></div>
                     <div class="mockup-phone-display">
