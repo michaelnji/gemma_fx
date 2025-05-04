@@ -51,7 +51,19 @@
                         <div class="flex items-center gap-3">
                             <div class="avatar">
                                 <div class=" w-12 rounded-full">
-                                    <img :src="details.authorInfo.imageUrl" />
+
+                                    <NuxtImg
+                                        :src="$urlFor(details.authorInfo.imageUrl).format('webp').height(500).width(500).url()"
+                                        :custom="true" v-slot="{ src, isLoaded, imgAttrs }">
+
+                                        <!-- Show the actual image when loaded -->
+                                        <img v-if="isLoaded" v-bind="imgAttrs" :src="src">
+
+                                        <!-- Show a placeholder while loading -->
+                                        <div class="size-12 rounded-full skeleton bg-base-300 lg:bg-base-200 "
+                                            v-if="!isLoaded">
+                                        </div>
+                                    </NuxtImg>
                                 </div>
                             </div>
                             <span class="text-lg text-secondary">{{ details.authorInfo.name }}</span>
