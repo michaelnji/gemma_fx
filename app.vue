@@ -7,7 +7,7 @@ onMounted(() => {
 </script>
 <template>
   <div class=" cursor-bounds !font-medium text-base" data-theme="gemma">
-
+    <NuxtLoadingIndicator color="oklch(87% 0.169 91.605)" />
     <NuxtLayout>
       <div>
         <NuxtPage />

@@ -39,19 +39,7 @@ export default defineNuxtConfig({
       includeCustomCollections: true,
     },
   },
-  image: {
-    format: ['webp', 'png', 'jpeg'],
-    // define your own presets
-    presets: {
-      avatar: {
-        modifiers: {
-          format: 'jpg',
-          width: 50,
-          height: 50
-        }
-      }
-    }
-  },
+
   fonts: {
     defaults: {
       weights: [300, 400, 500, 600, 700, 800, 900],

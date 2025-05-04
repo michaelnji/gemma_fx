@@ -8,18 +8,24 @@ import Gotcha from '~/components/Gotcha.vue';
 import CustomHeading from '~/components/CustomHeading.vue';
 import BlogImage from '~/components/BlogImage.vue';
 import SoftwareBlock from '~/components/SoftwareBlock.vue';
+// import { urlFor } from '~/lib/sanity';
 definePageMeta({
     layout: 'blog'
 })
 const route = useRoute()
 const post = ref<Post>()
 const isLoading = ref(true)
+const authorImgUrl = ref('')
+const mainImgUrl = ref('')
 onMounted(async () => {
     try {
         const resp = await $fetch<ServerResponse<StatusCode, Post>>(`/api/articles/${route.params.slug}`)
         if (resp.ok && resp.data) {
             isLoading.value = false
             post.value = resp.data
+            const { $urlFor } = useNuxtApp()
+            authorImgUrl.value = $urlFor(post.value.authorInfo.imageUrl).format('webp').height(500).width(500).url()
+            mainImgUrl.value = $urlFor(post.value.imageUrl).format('webp').quality(100).url()
         }
     } catch (error) {
 
@@ -52,17 +58,29 @@ onMounted(async () => {
 
                 <div
                     class="py-6 w-full mt-3 border-t-4 group-hover:border-base-300 transition-all border-base-300/80 border-dashed  flex flex-wrap items-center lg:gap-12 gap-y-6 gap-x-6">
-                    <div class="skeleton  bg-base-300 lg:bg-base-200 rounded-full size-10 md:size-12 art"
-                        v-if="isLoading"></div>
+                    <div class="skeleton  bg-base-300 lg:bg-base-200 rounded-full size-10 md:size-12" v-if="isLoading">
+                    </div>
                     <div v-if="!isLoading && post" class="avatar">
-                        <div class=" w-10 md:w-12 rounded-full border-2 border-stone-50 art">
-                            <img :src="post?.authorInfo.imageUrl" />
+                        <div class=" w-10 md:w-12 rounded-full border-2 border-stone-50 ">
+
+                            <NuxtImg :src="authorImgUrl" :alt="post.authorInfo.name" :custom="true"
+                                v-slot="{ src, isLoaded, imgAttrs }">
+
+                                <!-- Show the actual image when loaded -->
+                                <img v-if="isLoaded" v-bind="imgAttrs" :src="src">
+
+                                <!-- Show a placeholder while loading -->
+                                <div class="size-10 md:size-12 rounded-full skeleton bg-base-300 lg:bg-base-200 "
+                                    v-if="!isLoaded">
+                                </div>
+                            </NuxtImg>
                         </div>
                     </div>
                     <div class="flex gap-x-3 items-center-safe">
                         <div v-if="!isLoading && post && post.tags" v-for="tag, k in post?.tags">
-                            <span class=" badge md:badge-lg  bg-base-300 lg:bg-base-200  font-mono">#{{
-                                tag.title }}</span>
+                            <nuxt-link :to="`/articles?tag=${spacesToDashes(tag.title)}`"><span
+                                    class=" badge md:badge-lg  bg-base-300 lg:bg-base-200  font-mono">#{{
+                                        spacesToDashes(tag.title) }}</span></nuxt-link>
                         </div>
                         <div v-for="i in [1, 2, 3]" class="skeleton  bg-base-300 lg:bg-base-200 w-[4.5rem] h-[2rem]"
                             v-if="isLoading">
@@ -97,7 +115,16 @@ onMounted(async () => {
                 <div v-if="!isLoading && post"
                     class="p-[3px] bg-gradient-to-tl from-error via-primary to-success  mb-6">
 
-                    <img :src="post?.imageUrl" :alt="post?.title" class="w-full">
+
+                    <NuxtImg :src="mainImgUrl" alt="" class="w-full object-contain" :custom="true"
+                        v-slot="{ src, isLoaded, imgAttrs }">
+
+                        <!-- Show the actual image when loaded -->
+                        <img v-if="isLoaded" v-bind="imgAttrs" :src="src" class="w-full object-contain">
+
+                        <!-- Show a placeholder while loading -->
+                        <div class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[25rem]" v-if="!isLoaded"></div>
+                    </NuxtImg>
                 </div>
                 <div v-if="isLoading" class="space-y-12 mt-8">
                     <div v-for="i in [1, 2, 3]">
@@ -149,7 +176,18 @@ onMounted(async () => {
                         <div class="flex items-center gap-x-4">
                             <div class="avatar">
                                 <div class=" size-12 md:size-16 rounded-full border-2 border-stone-50 art">
-                                    <img :src="post?.authorInfo.imageUrl" />
+
+                                    <NuxtImg :src="authorImgUrl" :alt="post.authorInfo.name" :custom="true"
+                                        v-slot="{ src, isLoaded, imgAttrs }">
+
+                                        <!-- Show the actual image when loaded -->
+                                        <img v-if="isLoaded" v-bind="imgAttrs" :src="src">
+
+                                        <!-- Show a placeholder while loading -->
+                                        <div class="size-12 md:size-16 rounded-full skeleton bg-base-300 lg:bg-base-200"
+                                            v-if="!isLoaded">
+                                        </div>
+                                    </NuxtImg>
                                 </div>
                             </div>
                             <div class="pl-1">
