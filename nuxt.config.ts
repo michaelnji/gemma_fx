@@ -15,11 +15,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils',
     '@pinia/nuxt',
-    // '@unocss/nuxt',
-    // '@hypernym/nuxt-anime'
     '@vueuse/nuxt',
-    // '@nuxtjs/strapi',
-    // 'nuxt-strapi-blocks-renderer',
     '@nuxtjs/sanity'
   ],
   icon: {
