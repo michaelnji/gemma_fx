@@ -37,11 +37,11 @@
                                 <div v-for="tag, k in details.tags">
                                     <span v-if="k < 2" class=" badge bg-base-300  font-mono">#{{
                                         tag.title }}</span>
-                                    <span v-if="details.tags.length > 2" class=" badge  font-mono">+{{
-                                        details.tags.length -
-                                        2
-}}</span>
                                 </div>
+                                <span v-if="details.tags.length > 2" class=" badge  font-mono">+{{
+                                    details.tags.length -
+                                    2
+                                    }}</span>
                             </div>
 
                         </div>
