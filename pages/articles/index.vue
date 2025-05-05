@@ -225,7 +225,7 @@
                     <button @click="() => {
                         currentTag = 'all'
                         currentTopic = 'all'
-                    }" class="btn btn-outline  ml-auto hidden md:inline-flex btn-sm">
+}" class="btn btn-outline  ml-auto hidden sm:inline-flex btn-sm">
                         Reset
                         <Icon name="ph:x-duotone" size="18" />
                     </button>

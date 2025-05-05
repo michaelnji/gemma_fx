@@ -10,10 +10,10 @@ const style = computed(() => props.value.style)
 </script>
 <template>
     <div>
-        <h2 v-if="style === 'h2'" class="   font-bold text-5xl md:text-7xl">
+        <h2 v-if="style === 'h2'" class="font-bold text-5xl md:text-6xl">
             <slot></slot>
         </h2>
-        <h3 v-if="style === 'h3'" class="   font-bold text-5xl md:text-6xl">
+        <h3 v-if="style === 'h3'" class="font-bold text-4xl md:text-5xl">
             <slot></slot>
         </h3>
         <h4 v-if="style === 'h4'" class=" font-bold text-3xl md:text-4xl">

@@ -8,6 +8,7 @@ import Gotcha from '~/components/Gotcha.vue';
 import CustomHeading from '~/components/CustomHeading.vue';
 import BlogImage from '~/components/BlogImage.vue';
 import SoftwareBlock from '~/components/SoftwareBlock.vue';
+import BlogLink from '~/components/BlogLink.vue';
 // import { urlFor } from '~/lib/sanity';
 definePageMeta({
     layout: 'blog'
@@ -76,10 +77,10 @@ onMounted(async () => {
                             </NuxtImg>
                         </div>
                     </div>
-                    <div class="flex gap-x-3 items-center-safe">
+                    <div class="flex flex-wrap gap-2 items-center-safe">
                         <div v-if="!isLoading && post && post.tags" v-for="tag, k in post?.tags">
                             <nuxt-link :to="`/articles?tag=${spacesToDashes(tag.title)}`"><span
-                                    class=" badge md:badge-lg  bg-base-300 lg:bg-base-200  font-mono">#{{
+                                    class=" badge md:badge-lg  bg-base-300 lg:bg-base-200 font-bold font-mono">#{{
                                         spacesToDashes(tag.title) }}</span></nuxt-link>
                         </div>
                         <div v-for="i in [1, 2, 3]" class="skeleton  bg-base-300 lg:bg-base-200 w-[4.5rem] h-[2rem]"
@@ -148,7 +149,7 @@ onMounted(async () => {
                             marks: {
                                 // color: ColorBlock,
                                 // code: InlineCodeBlock,
-                                // link: LinkBlog
+                                link: (props, { slots }) => h(BlogLink, props, slots.default?.()),
                                 software: (props) => h(SoftwareBlock, { pt: props.text }),
                                 // software: (_, { slots, }) => h(SoftwareBlock, slots.default?.()),
                             },

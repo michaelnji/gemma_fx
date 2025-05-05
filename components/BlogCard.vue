@@ -24,7 +24,7 @@
                         </span>
                     </div>
                     <div class="p-6 bg-base-100 text-base-content">
-                        <h2 class="font-display font-bold text-primary text-pretty text-3xl">
+                        <h2 class=" font-bold text-primary text-pretty text-2xl sm:text-3xl">
                             {{ details.title }}
                         </h2>
                         <p class="mt-2 md:text-lg opacity-90">
@@ -33,12 +33,14 @@
 
                         <div class="flex py-3 justify-between items-center gap-x-2">
 
-                            <div class="flex gap-1  items-center">
+                            <div class="flex flex-wrap gap-1  items-center">
                                 <div v-for="tag, k in details.tags">
-                                    <span v-if="k < 2" class=" badge bg-base-300  font-mono">#{{
-                                        tag.title }}</span>
+                                    <span v-if="k < 2"
+                                        class=" badge-sm badge font-bold sm:badge-md bg-base-300  font-mono">#{{
+                                            tag.title }}</span>
                                 </div>
-                                <span v-if="details.tags.length > 2" class=" badge  font-mono">+{{
+                                <span v-if="details.tags.length > 2"
+                                    class="  badge-sm badge font-bold sm:badge-md bg-base-300  font-mono">+{{
                                     details.tags.length -
                                     2
                                     }}</span>
