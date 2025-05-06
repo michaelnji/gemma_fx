@@ -29,7 +29,7 @@ onMounted(async () => {
             mainImgUrl.value = $urlFor(post.value.imageUrl).format('webp').quality(100).url()
         }
     } catch (error) {
-
+        throw createError(error as Error)
     }
 
 })

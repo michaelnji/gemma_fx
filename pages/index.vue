@@ -24,16 +24,22 @@ const activeCategory = ref('featured')
                 <CategoryBar :tab="activeCategory" @category-change="(e) => activeCategory = e" />
             </div>
             <div class="">
-                <!-- Featured posts -->
-                <SectionsFeatured v-if="activeCategory === 'featured'" />
-                <!-- Market analysis
-                <SectionsAnalysis v-if="activeCategory === 'analysis'" /> -->
-                <!--Rookies -->
-                <SectionsRookies v-if="activeCategory === 'rookies'" />
-                <!--Software -->
-                <SectionsSoftware v-if="activeCategory === 'software'" />
-                <!--Tools -->
-                <SectionsTools v-if="activeCategory === 'tools'" />
+                <NuxtErrorBoundary>
+                    <!-- You use the default slot to render your content -->
+                    <template #error="{ error, clearError }">
+                        <ErrorDisplay :error="error" :clear-error="clearError" />
+                    </template>
+                    <!-- Featured posts -->
+                    <SectionsFeatured v-if="activeCategory === 'featured'" />
+                    <!-- Market analysis
+                    <SectionsAnalysis v-if="activeCategory === 'analysis'" /> -->
+                    <!--Rookies -->
+                    <SectionsRookies v-if="activeCategory === 'rookies'" />
+                    <!--Software -->
+                    <SectionsSoftware v-if="activeCategory === 'software'" />
+                    <!--Tools -->
+                    <SectionsTools v-if="activeCategory === 'tools'" />
+                </NuxtErrorBoundary>
             </div>
         </div>
         <div class="md:space-y-56 space-y-24 mt-12 md:mt-24 xl:mt-48">
