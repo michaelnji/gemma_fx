@@ -26,24 +26,19 @@ onMounted(async () => {
             posts.value = resp.data
             isLoading.value = false
         }
+
     } catch (error) {
         isLoading.value = false
-        return createError(error as Error)
+        throw createError(error as Error)
     }
 })
 </script>
 <template>
     <div class=" transition-all">
-        <ErrorBoundary>
-            <!-- You use the default slot to render your content -->
-            <template #error="{ error, clearError }">
-                You can display the error locally here: {{ error }}
 
-            </template>
-        </ErrorBoundary>
 
         <div v-if="posts && posts.length >= 1 && !isLoading"
-            class=" pl-3 z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 place-items-center gap-8">
+            class=" pl-3 z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-8">
             <div v-if="amount !== 'all'" v-for="post in posts.filter((x, y) => y <= Number(amount))">
                 <BlogCard :details="post" />
             </div>
@@ -56,8 +51,8 @@ onMounted(async () => {
         <div v-if="!isLoading && posts && posts.length < 1"
             class="max-w-5xl relative bg-base-200 overflow-hidden p-6 w-full mx-auto">
             <Icon name="ph:empty-duotone" size="80" class="mb-4" />
-            <h2 class="font-bold font-display  text-4xl md:text-5xl text-base-content/60">Articles in the works...</h2>
-            <p class="text-lg md:text-xl mt-3 opacity-50">Please check back later for newly published articles!</p>
+            <h2 class="font-bold   text-3xl md:text-4xl text-base-content/60">Articles in the works...</h2>
+            <p class="text-base md:text-lg mt-3 opacity-50">Please check back later for newly published articles!</p>
             <div
                 class=" mt-8  p-3 bg-primary/10 text-primary max-sm:flex-col max-sm:items-start flex gap-3 md:w-max items-center-safe">
                 <Icon name="ph:info-duotone" />
@@ -73,8 +68,8 @@ onMounted(async () => {
                 class="absolute hidden md:block border-2 size-10 bg-transparent border-secondary -bottom-5 -right-5 rotate-45">
             </div>
         </div>
-        <div v-if="isLoading" class="  z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 place-items-center gap-12">
-            <div class="w-full" v-for="post in [0, 1, 2, 3]">
+        <div v-if="isLoading" class="  z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-12">
+            <div class="w-full" v-for="post in [0, 1, 2]">
                 <div class="w-full h-14 skeleton bg-base-300 lg:bg-base-200"></div>
                 <div class="w-full h-8 mt-4 skeleton bg-base-300 lg:bg-base-200"></div>
                 <div class="w-full h-20 mt-4 skeleton bg-base-300 lg:bg-base-200"></div>

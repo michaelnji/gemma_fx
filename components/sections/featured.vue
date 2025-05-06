@@ -5,7 +5,7 @@ const activeFilter = ref<'popular' | 'top-liked'>('popular')
     <div class=" py-12 px-3 md:px-6">
         <!-- Header -->
         <div class="flex flex-col md:flex-row  md:items-center md:justify-between gap-4">
-            <h2 class="font-bold @max-xs:text-xl font-display max-[20rem]:text-2xl text-4xl">
+            <h2 class="font-bold @max-xs:text-xl  max-[20rem]:text-2xl text-4xl">
                 <span class="text-primary">Featured</span> <span class="text-base-content/50">Posts</span>
             </h2>
             <!-- <div class="flex items-center gap-2">

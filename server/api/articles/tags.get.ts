@@ -12,8 +12,8 @@ export default defineEventHandler(async (event) => {
         return sendServerResponse(200, 'sucess', resp)
     } catch (error) {
         if (error instanceof Error) {
-            setResponseStatus(event, 500, error.message.includes('fetch failed') ? 'Fetch failed' : error.message)
-            return sendServerResponse(500, error.message.includes('fetch failed') ? 'Fetch failed' : error.message)
+            setResponseStatus(event, 500, error.message.includes('fetch') || error.message.includes('getaddrinfo') ? 'Fetch failed' : error.message)
+            return sendServerResponse(500, error.message.includes('fetch') || error.message.includes('getaddrinfo') ? 'Fetch failed' : error.message)
         }
     }
 })
