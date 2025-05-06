@@ -20,10 +20,7 @@ onMounted(async () => {
         }
         const resp = await $fetch<ServerResponse<StatusCode, Post[]>>('/api/articles/fetchFiltered', {
             method: "POST",
-            body: filters,
-            retry: 1,
-            retryStatusCodes: [400],
-            retryDelay: 10
+            body: filters
         })
         if (resp.ok && resp.data) {
             posts.value = resp.data
