@@ -4,6 +4,7 @@ const showCursor = ref(false)
 onMounted(() => {
   showCursor.value = true
 })
+
 </script>
 <template>
   <div class=" cursor-bounds !font-medium text-base" data-theme="gemma">

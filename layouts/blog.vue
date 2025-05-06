@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-
+useHead({
+    titleTemplate: 'Article - %s',
+})
 </script>
 <template>
     <div class=" !max-w-screen  !overflow-x-clip   bg-base-100 relative">

@@ -57,7 +57,7 @@ onMounted(async () => {
                 class=" mt-8  p-3 bg-primary/10 text-primary max-sm:flex-col max-sm:items-start flex gap-3 md:w-max items-center-safe">
                 <Icon name="ph:info-duotone" />
 
-                <p class="font-mono">
+                <p class="">
                     I post articles, prop firm reviews & coupon codes bi-weekly
                 </p>
             </div>

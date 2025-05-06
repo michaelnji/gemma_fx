@@ -43,7 +43,7 @@ onMounted(async () => {
                 <div v-if="!isLoading && post"
                     class="p-[3px] bg-gradient-to-tl from-primary via-secondary to-success w-max mb-6">
 
-                    <div class=" bg-base-100 px-6 py-2 xl:text-lg font-extrabold font-mono ">
+                    <div class=" bg-base-100 px-3 py-1 text-xl !font-mono  font-extrabold ">
                         <!-- <Icon name="ph:users-three-duotone" size="70" /> -->
                         {{ post?.category.title }}
 
@@ -53,7 +53,7 @@ onMounted(async () => {
                 <div class="skeleton mb-3 bg-base-300 lg:bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
                 <div class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
                 <h1 v-if="!isLoading && post"
-                    class=" lg:text-7xl  md:text-6xl text-5xl text-pretty xl:text-8xl font-display font-bold">
+                    class=" lg:text-8xl  md:text-7xl text-5xl text-pretty xl:text-9xl font-display font-bold max-w-7xl">
                     {{ post?.title }}
                 </h1>
 
@@ -81,7 +81,7 @@ onMounted(async () => {
                         <div v-if="!isLoading && post && post.tags" v-for="tag, k in post?.tags">
                             <nuxt-link :to="`/articles?tag=${spacesToDashes(tag.title)}`"><span
                                     class=" badge md:badge-lg  bg-base-300 lg:bg-base-200 font-bold font-mono">#{{
-                                        spacesToDashes(tag.title) }}</span></nuxt-link>
+    spacesToDashes(tag.title) }}</span></nuxt-link>
                         </div>
                         <div v-for="i in [1, 2, 3]" class="skeleton  bg-base-300 lg:bg-base-200 w-[4.5rem] h-[2rem]"
                             v-if="isLoading">
@@ -139,7 +139,7 @@ onMounted(async () => {
                 </div>
                 <div v-if="!isLoading && post" class="mt-8 md:p-6  md:border-6 border-dashed border-base-300">
                     <div
-                        class="!min-w-full   prose-p:!min-w-full  prose prose-xl md:!prose-2xl prose-img:!my-0  prose-invert prose-stone prose-headings:font-extrabold prose-headings prose-pre:!p-0 prose-pre:whitespace-pre-wrap prose-p:text-pretty prose-pre:!bg-inherit prose-pre:!text-lg md:prose-pre:!text-xl lg:prose-pre:!text-2xl  border-b-2 dark:border-base-200 pb-10">
+                        class="!min-w-full   prose-p:!min-w-full  prose prose-lg md:!prose-2xl prose-img:!my-0  prose-invert prose-stone prose-headings:font-extrabold prose-headings prose-pre:!p-0 prose-pre:whitespace-pre-wrap prose-p:text-pretty prose-pre:!bg-inherit prose-pre:!text-lg md:prose-pre:!text-xl lg:prose-pre:!text-2xl  border-b-2 dark:border-base-200 pb-10">
                         <PortableText v-if="post && post.body" :value="post?.body as any[]" :components="{
                             types: {
                                 // code: CodeBlock,

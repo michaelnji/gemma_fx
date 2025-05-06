@@ -1,7 +1,15 @@
 <!-- homepage (you can delete this page to start your project) -->
 <script lang="ts" setup>
 import PropReviewSection from '~/components/PropReviewSection.vue';
+useSeoMeta({
+    title: 'Your trusted resource for forex trading excellence',
+    description: 'Technical analysis, fundamentals, psychology, I write bi-weekly articles helping you progress as a trader. Get honest reviews of prop firms and exclusive discounts.',
+    ogTitle: 'Your trusted resource for forex trading excellence',
+    ogDescription: 'Technical analysis, fundamentals, psychology, I write bi-weekly articles helping you progress as a trader. Get honest reviews of prop firms and exclusive discounts.',
+    ogImage: '/og-image.jpg',
+    twitterCard: 'summary_large_image',
 
+})
 
 definePageMeta({
     layout: 'default'

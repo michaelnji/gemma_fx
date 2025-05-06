@@ -9,10 +9,11 @@
 /* Define your branding fonts here*/
 @theme {
     --font-mono: "Heming Variable";
-        --font-display: "Akeila";
-        --font-body: "Actay";
-            --font-sans: "Actay";
-        --font-acro: "Hanson";
+        --font-display: "Rota";
+            --font-body: "Canava Grotesk";
+            --font-sans: "Canava Grotesk";
+            --font-condensed: 'Formula Condensed';
+            --font-condensed-alt: 'Galgo';
 }
 
 @plugin "@tailwindcss/typography";

@@ -16,7 +16,11 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@nuxtjs/sanity'
+    '@nuxtjs/sanity',
+    'nuxt-seo-utils',
+    '@nuxtjs/seo',
+    "nuxt-radash",
+    'nuxt-glaze'
   ],
   icon: {
 
@@ -62,5 +66,6 @@ export default defineNuxtConfig({
     useCdn: false,
     apiVersion: '2023-12-13',
     token: process.env.NUXT_SANITY_TOKEN,
+    perspective: 'published'
   }
 })
