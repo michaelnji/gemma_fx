@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/sanity',
-    'nuxt-seo-utils',
+    // 'nuxt-seo-utils',
     // '@nuxtjs/seo',
     "nuxt-radash",
     'nuxt-glaze'
