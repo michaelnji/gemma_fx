@@ -151,9 +151,9 @@
                     Unbiased prop firm reviews you can trust. Get clear, concise insights into platforms, fees, and real
                     trader experiences. Make confident decisions and find the right firm for your trading goals.</p>
                 <div class="w-full flex justify-center lg:justify-start">
-                    <NuxtLink to="/prop-firms" class=" btn btn-accent max-md:btn-block mt-6  btn-lg   ">View our reviews
+                    <NuxtLink to="/prop-firms" class=" btn btn-accent max-md:btn-block mt-6  btn-lg">View our reviews
                         <Icon name="ph:arrow-right" />
-                    </NuxtLink to="/prop-firms">
+                    </NuxtLink>
                 </div>
             </div>
         </div>
