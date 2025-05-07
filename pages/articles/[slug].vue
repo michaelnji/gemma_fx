@@ -53,7 +53,7 @@ onMounted(async () => {
                 <div class="skeleton mb-3 bg-base-300 lg:bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
                 <div class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
                 <h1 v-if="!isLoading && post"
-                    class=" lg:text-8xl  md:text-7xl text-5xl text-pretty xl:text-9xl font-display font-bold max-w-7xl">
+                    class=" lg:text-8xl   text-5xl text-pretty  font-display font-extrabold max-w-7xl">
                     {{ post?.title }}
                 </h1>
 
@@ -81,10 +81,10 @@ onMounted(async () => {
                         <div v-if="!isLoading && post && post.tags" v-for="tag, k in post?.tags">
                             <nuxt-link :to="`/articles?tag=${spacesToDashes(tag.title)}`"><span
                                     class=" badge md:badge-lg  bg-base-300 lg:bg-base-200 font-bold font-mono">#{{
-    spacesToDashes(tag.title) }}</span></nuxt-link>
+                                    spacesToDashes(tag.title) }}</span></nuxt-link>
                         </div>
-                        <div v-for="i in [1, 2, 3]" class="skeleton  bg-base-300 lg:bg-base-200 w-[4.5rem] h-[2rem]"
-                            v-if="isLoading">
+                        <div v-for="i in useRange(0, 2)"
+                            class="skeleton  bg-base-300 lg:bg-base-200 w-[4.5rem] h-[2rem]" v-if="isLoading">
                         </div>
                     </div>
                     <div class="skeleton  bg-base-300 lg:bg-base-200 w-[12rem] h-[2.5rem]" v-if="isLoading"></div>
@@ -128,10 +128,11 @@ onMounted(async () => {
                     </NuxtImg>
                 </div>
                 <div v-if="isLoading" class="space-y-12 mt-8">
-                    <div v-for="i in [1, 2, 3]">
+                    <div v-for="i in useRange(0, 2)">
                         <div class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[5rem]"></div>
                         <div class="mt-6 space-y-4 w-5/6">
-                            <div v-for="i in [1, 2, 3]" class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[2rem]">
+                            <div v-for="i in useRange(0, 2)"
+                                class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[2rem]">
                             </div>
                         </div>
                     </div>
@@ -170,7 +171,7 @@ onMounted(async () => {
                 </div>
             </div>
             <div class="lg:w-2/5 mt-12 lg:mt-0 ">
-                <div class="sticky top-16">
+                <div class="sticky top-5">
                     <div v-if="isLoading" class="w-full  h-48 skeleton bg-base-300 lg:bg-base-200 "></div>
                     <div v-if="!isLoading && post"
                         class="w-full p-6  border-6 border-base-300 border-dashed text-secondary ">
@@ -207,6 +208,13 @@ onMounted(async () => {
                         </p>
 
                     </div>
+
+                    <NuxtErrorBoundary>
+                        <template #error="{ error, clearError }">
+                            <ErrorDisplay :error="error" :clear-error="clearError" />
+                        </template>
+                        <Related v-if="post" :tags="post.tags" :slug="post?.slug.current" />
+                    </NuxtErrorBoundary>
                 </div>
             </div>
 

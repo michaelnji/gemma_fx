@@ -45,10 +45,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full flex justify-center">
-                    <button class=" !mx-auto btn btn-accent max-md:btn-block mt-6  btn-lg   ">View coupon codes
+                <div class="w-full ">
+                    <NuxtLink to="/promo" class="  btn btn-accent max-md:btn-block mt-6 btn-lg ">View coupon
+                        codes
                         <Icon name="ph:arrow-right" />
-                    </button>
+                    </NuxtLink>
                 </div>
             </div>
             <div class="px-6 hidden md:block relative">
