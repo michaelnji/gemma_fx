@@ -21,7 +21,8 @@
     const nextPost = computed(() => {
         const data = posts.value
         if (data) {
-            const currentPostIndex = data.findIndex(post => post.slug.current === props.slug) ?? -1
+            let currentPostIndex = data.findIndex(post => post.slug.current === props.slug) ?? -1
+            currentPostIndex = currentPostIndex === data.length - 1 ? -1 : currentPostIndex
             return data[currentPostIndex + 1]
         }
         return null

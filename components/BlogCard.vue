@@ -24,7 +24,7 @@
                         </span>
                     </div>
                     <div class="p-6 bg-base-100 text-base-content">
-                        <h2 class=" font-bold font-display text-pretty text-2xl sm:text-3xl">
+                        <h2 class=" font-bold font-display text-pretty text-3xl">
                             {{ details.title }}
                         </h2>
                         <p class="mt-2 md:text-lg opacity-90">

@@ -53,7 +53,7 @@ onMounted(async () => {
                 <div class="skeleton mb-3 bg-base-300 lg:bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
                 <div class="skeleton  bg-base-300 lg:bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
                 <h1 v-if="!isLoading && post"
-                    class=" lg:text-8xl   text-5xl text-pretty  font-display font-extrabold max-w-7xl">
+                    class=" lg:text-8xl md:text-7xl  text-5xl !text-pretty  font-display font-extrabold">
                     {{ post?.title }}
                 </h1>
 
@@ -138,7 +138,7 @@ onMounted(async () => {
                     </div>
 
                 </div>
-                <div v-if="!isLoading && post" class="mt-8 md:p-6  md:border-6 border-dashed border-base-300">
+                <div v-if="!isLoading && post" class="mt-8 pt-6 border-t-6 border-dashed border-base-300">
                     <div
                         class="!min-w-full   prose-p:!min-w-full  prose prose-lg md:!prose-2xl prose-img:!my-0  prose-invert prose-stone prose-headings:font-extrabold prose-headings prose-pre:!p-0 prose-pre:whitespace-pre-wrap prose-p:text-pretty prose-pre:!bg-inherit prose-pre:!text-lg md:prose-pre:!text-xl lg:prose-pre:!text-2xl  border-b-2 dark:border-base-200 pb-10">
                         <PortableText v-if="post && post.body" :value="post?.body as any[]" :components="{
