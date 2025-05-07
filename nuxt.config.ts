@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     'nuxt-seo-utils',
     '@nuxtjs/seo',
     "nuxt-radash",
-    'nuxt-glaze'
+    // 'nuxt-glaze'
   ],
   icon: {
 

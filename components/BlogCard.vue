@@ -24,7 +24,7 @@
                         </span>
                     </div>
                     <div class="p-6 bg-base-100 text-base-content">
-                        <h2 class=" font-bold text-primary text-pretty text-2xl sm:text-3xl">
+                        <h2 class=" font-bold font-display text-pretty text-2xl sm:text-3xl">
                             {{ details.title }}
                         </h2>
                         <p class="mt-2 md:text-lg opacity-90">
@@ -37,7 +37,7 @@
                                 <div v-for="tag, k in details.tags">
                                     <span v-if="k < 2"
                                         class=" badge-sm badge font-bold sm:badge-md bg-base-300  font-mono">#{{
-                                            tag.title }}</span>
+                                        tag.title }}</span>
                                 </div>
                                 <span v-if="details.tags.length > 2"
                                     class="  badge-sm badge font-bold sm:badge-md bg-base-300  font-mono">+{{

@@ -69,7 +69,7 @@ onMounted(async () => {
             </div>
         </div>
         <div v-if="isLoading" class="  z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-12">
-            <div class="w-full" v-for="post in [0, 1, 2]">
+            <div class="w-full" v-for="post in useRange(0, 2)">
                 <div class="w-full h-14 skeleton bg-base-300 lg:bg-base-200"></div>
                 <div class="w-full h-8 mt-4 skeleton bg-base-300 lg:bg-base-200"></div>
                 <div class="w-full h-20 mt-4 skeleton bg-base-300 lg:bg-base-200"></div>
