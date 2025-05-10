@@ -14,24 +14,24 @@
                     class=" w-full border-5  border-base-300 duration-300 cursor-pointer  transition-all md:hover:-translate-3 -translate-2  group ">
                     <div
                         class="p-3 bg-base-200 text-base-content border-b-4 border-base-300 flex justify-between items-center gap-x-2">
-                        <h2 class="font-display font-bold text-xl">
+                        <h2 class="font-condensed text-secondary font-bold text-3xl">
                             {{ details.post_type.title }}
                         </h2>
                         <span
-                            class="badge badge-primary border border-primary-content font-bold sh-badge transition-all flex items-center gap-x-2">{{
+                            class="badge badge-primary border border-primary-content font-bold font-mono text-sm sh-badge transition-all flex items-center gap-x-2">{{
                             details.category.title }}
                             <!-- <Icon :name="details.category.icon" size="18" /> -->
                         </span>
                     </div>
                     <div class="p-6 bg-base-100 text-base-content">
-                        <h2 class=" font-bold font-display text-pretty text-3xl">
+                        <h2 class=" font-bold  text-pretty text-2xl/snug md:text-3xl/snug">
                             {{ details.title }}
                         </h2>
-                        <p class="mt-2 md:text-lg opacity-90">
+                        <p class="mt-2 text-base/normal md:text-lg/normal opacity-80">
                             {{ details.excerpt }}
                         </p>
 
-                        <div class="flex py-3 justify-between items-center gap-x-2">
+                        <div class="flex py-3 mt-4 justify-between items-center gap-x-2">
 
                             <div class="flex flex-wrap gap-1  items-center">
                                 <div v-for="tag, k in details.tags">

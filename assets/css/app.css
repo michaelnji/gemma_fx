@@ -8,8 +8,8 @@
 
 /* Define your branding fonts here*/
 @theme {
-    --font-mono: "Heming Variable";
-        --font-display: "Rota";
+    --font-mono: "Space Grotesk";
+        --font-display: "Syne";
             --font-body: "Canava Grotesk";
             --font-sans: "Canava Grotesk";
             --font-condensed: 'Formula Condensed';
@@ -25,7 +25,7 @@
     --color-base-100: oklch(0% 0 0);
     --color-base-200: oklch(14% 0.005 285.823);
         --color-base-300: oklch(21% 0.006 285.885);
-        --color-base-content: oklch(98% 0 0);
+        --color-base-content: oklch(94% 0 0);
         --color-primary: oklch(87% 0.169 91.605);
         --color-primary-content: oklch(28% 0.066 53.813);
         --color-secondary: oklch(81% 0.203 315.504);
@@ -54,7 +54,7 @@
 
 @custom-variant hover (&:hover);
 .btn {
-    @apply cursor-pointer transition-all px-6 py-2 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]
+    @apply cursor-pointer transition-all px-6 py-2 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] font-display
 }
 
 .btn-ghost, .btn-soft {
