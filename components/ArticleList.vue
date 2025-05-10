@@ -38,7 +38,7 @@ onMounted(async () => {
 
 
         <div v-if="posts && posts.length >= 1 && !isLoading"
-            class=" pl-3 z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-8">
+            class=" pl-3 z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-8">
             <div v-if="amount !== 'all'" v-for="post in posts.filter((x, y) => y <= Number(amount))">
                 <BlogCard :details="post" />
             </div>

@@ -17,7 +17,7 @@ const icon = computed(() => {
             <div class="size-5 overflow-hidden inline-flex mt-2 mr-2">
                 <img :src="icon" alt="" class="!my-0 !py-0">
             </div>
-            <span class="opacity-80 font-mono font-bold !leading-0">{{ props.pt.toLowerCase().split('.')[0] }}</span>
+            <span class="opacity-90 font-bold !leading-0">{{ props.pt.toLowerCase().split('.')[0] }}</span>
         </div>
     </div>
 </template>

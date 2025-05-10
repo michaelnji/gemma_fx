@@ -21,7 +21,8 @@
     const nextPost = computed(() => {
         const data = posts.value
         if (data) {
-            const currentPostIndex = data.findIndex(post => post.slug.current === props.slug) ?? -1
+            let currentPostIndex = data.findIndex(post => post.slug.current === props.slug) ?? -1
+            currentPostIndex = currentPostIndex === data.length - 1 ? -1 : currentPostIndex
             return data[currentPostIndex + 1]
         }
         return null
@@ -42,34 +43,34 @@
     <div class="mt-12">
         <div v-if="isLoading" class="w-full  h-48 skeleton bg-base-300 lg:bg-base-200"></div>
         <div class="" v-if="!isLoading && processedPosts && processedPosts.length > 0">
-            <h2 class="font-diaplay text-3xl font-bold">You might also like</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2  gap-4 mt-6">
+            <h2 class="text-2xl ">You might also like</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-1 gap-4 mt-6">
                 <NuxtLink v-for="post in processedPosts" :to="post.slug.current"
                     :aria-label="`Read article: ${post.title}`">
                     <div class=" pl-3 border-l-2 border-primary">
 
                         <div class="">
-                            <span class="mb-1 badge badge-sm font-mono font-bold badge-secondary">
+                            <span class="mb-1 badge  font-mono font-bold badge-secondary">
                                 {{ post.category.title }}
                             </span>
-                            <h2 class="  text-xl">{{ post.title }}</h2>
+                            <h2 class="  text-2xl font-display">{{ post.title }}</h2>
                         </div>
                     </div>
                 </NuxtLink>
             </div>
         </div>
         <div class="" v-if="!isLoading && processedPosts && processedPosts.length <= 0 && nextPost">
-            <h2 class="font-diaplay text-3xl font-bold">Next article</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2  gap-4 mt-6">
+            <h2 class=" text-2xl ">Next article</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-1   gap-4 mt-6">
                 <NuxtLink :aria-label="`Read next article: ${nextPost.title}`"
                     :to="`/articles/${nextPost.slug.current}`">
                     <div class=" pl-3 border-l-2 border-primary">
 
                         <div class="">
-                            <span class="mb-1 badge badge-sm font-mono font-bold badge-secondary">
+                            <span class="mb-1 badge  font-mono font-bold badge-secondary">
                                 {{ nextPost.category.title }}
                             </span>
-                            <h2 class="  text-xl">{{ nextPost.title }}</h2>
+                            <h2 class="  text-2xl font-display">{{ nextPost.title }}</h2>
                         </div>
                     </div>
                 </NuxtLink>
