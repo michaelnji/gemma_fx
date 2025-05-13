@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Post } from '~/server/types/blog.type';
-import type { ServerResponse, StatusCode } from '~/server/types/index.types';
+import type { ServerResponse, StatusCodes } from 'nexus-req';
 import { PortableText } from '@portabletext/vue';
 import Hint from '~/components/Hint.vue';
 import Quote from '~/components/Quote.vue';
@@ -20,7 +20,7 @@ const authorImgUrl = ref('')
 const mainImgUrl = ref('')
 onMounted(async () => {
     try {
-        const resp = await $fetch<ServerResponse<StatusCode, Post>>(`/api/articles/${route.params.slug}`)
+        const resp = await $fetch<ServerResponse<StatusCodes, Post>>(`/api/articles/${route.params.slug}`)
         if (resp.ok && resp.data) {
             isLoading.value = false
             post.value = resp.data
@@ -51,14 +51,14 @@ onMounted(async () => {
                     </div>
                 </div>
                 <div class="skeleton mb-3 bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
-                <div class="skeleton  bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
+                <div class="skeleton   w-full h-[6rem]" v-if="isLoading"></div>
                 <h1 v-if="!isLoading && post" class=" lg:text-8xl md:text-7xl  text-4xl !text-pretty  font-display">
                     {{ post?.title }}
                 </h1>
 
                 <div
                     class="py-6 w-full mt-3 border-t-4 group-hover:border-base-300 transition-all border-base-300/80 border-dashed  flex flex-wrap items-center lg:gap-12 gap-y-6 gap-x-6">
-                    <!-- <div class="skeleton  bg-base-200 rounded-full size-10 md:size-12" v-if="isLoading">
+                    <!-- <div class="skeleton   rounded-full size-10 md:size-12" v-if="isLoading">
                     </div> -->
                     <!-- <div v-if="!isLoading && post" class="avatar">
                         <div class=" w-10 md:w-12 rounded-full border-2 border-stone-50 ">
@@ -76,7 +76,7 @@ onMounted(async () => {
                             </NuxtImg>
                         </div>
                     </div> -->
-                    <div class="skeleton  bg-base-200 w-[12rem] h-[2.5rem]" v-if="isLoading"></div>
+                    <div class="skeleton   w-[12rem] h-[2.5rem]" v-if="isLoading"></div>
                     <div v-if="!isLoading && post" class="flex py-1 px-2 bg-base-200 gap-x-3 items-center-safe">
                         <Icon name="ph:calendar-dot-duotone" class="text-primary" />
                         <p class=" md:text-lg">
@@ -90,8 +90,7 @@ onMounted(async () => {
                                     class=" badge   bg-stone-800 ">{{
                                     spacesToDashes(tag.title) }}</span></nuxt-link>
                         </div>
-                        <div v-for="i in useRange(0, 2)" class="skeleton  bg-base-200 w-[4.5rem] h-[2rem]"
-                            v-if="isLoading">
+                        <div v-for="i in useRange(0, 2)" class="skeleton   w-[4.5rem] h-[2rem]" v-if="isLoading">
                         </div>
                     </div>
 
@@ -112,7 +111,7 @@ onMounted(async () => {
         </div>
         <div class="lg:pt-12 w-full xl:max-w-[90rem] px-6  mx-auto lg:flex gap-x-12">
             <div class="lg:w-3/5">
-                <div class="skeleton  bg-base-200 w-full h-[12.5rem] md:h-[25rem]" v-if="isLoading">
+                <div class="skeleton   w-full h-[12.5rem] md:h-[25rem]" v-if="isLoading">
                 </div>
                 <div v-if="!isLoading && post"
                     class="p-[3px] bg-gradient-to-tl from-error via-primary to-success  mb-6">
@@ -125,14 +124,14 @@ onMounted(async () => {
                         <img v-if="isLoaded" v-bind="imgAttrs" :src="src" class="w-full object-contain">
 
                         <!-- Show a placeholder while loading -->
-                        <div class="skeleton  bg-base-200 w-full h-[25rem]" v-if="!isLoaded"></div>
+                        <div class="skeleton   w-full h-[25rem]" v-if="!isLoaded"></div>
                     </NuxtImg>
                 </div>
                 <div v-if="isLoading" class="space-y-12 mt-8">
                     <div v-for="i in useRange(0, 2)">
-                        <div class="skeleton  bg-base-200 w-full h-[5rem]"></div>
+                        <div class="skeleton   w-full h-[5rem]"></div>
                         <div class="mt-6 space-y-4 w-5/6">
-                            <div v-for="i in useRange(0, 2)" class="skeleton  bg-base-200 w-full h-[2rem]">
+                            <div v-for="i in useRange(0, 2)" class="skeleton   w-full h-[2rem]">
                             </div>
                         </div>
                     </div>

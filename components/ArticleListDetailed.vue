@@ -269,21 +269,21 @@ onMounted(async () => {
                 </div>
                 <div v-if="isLoading" class="  z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-12">
                     <div class="w-full" v-for="post in useRange(0, 2)">
-                        <div class="w-full h-14 skeleton bg-base-300 lg:bg-base-200"></div>
-                        <div class="w-full h-8 mt-4 skeleton bg-base-300 lg:bg-base-200"></div>
-                        <div class="h-[15rem] w-full skeleton bg-base-300 lg:bg-base-200 "></div>
-                        <div class="w-full h-20 mt-4 skeleton bg-base-300 lg:bg-base-200"></div>
+                        <div class="w-full h-14 skeleton"></div>
+                        <div class="w-full h-8 mt-4 skeleton"></div>
+                        <div class="h-[15rem] w-full skeleton "></div>
+                        <div class="w-full h-20 mt-4 skeleton"></div>
                         <div class="mt-4 flex gap-x-3">
-                            <div class="w-1/3 h-8  skeleton bg-base-300 lg:bg-base-200"></div>
-                            <div class="w-1/3 h-8  skeleton bg-base-300 lg:bg-base-200"></div>
-                            <div class="w-1/3 h-8  skeleton bg-base-300 lg:bg-base-200"></div>
+                            <div class="w-1/3 h-8  skeleton"></div>
+                            <div class="w-1/3 h-8  skeleton"></div>
+                            <div class="w-1/3 h-8  skeleton"></div>
                         </div>
-                        <div class="w-full h-2 my-4 skeleton bg-base-300 lg:bg-base-200"></div>
+                        <div class="w-full h-2 my-4 skeleton"></div>
                         <div class="mt-4 flex gap-x-3 items-center justify-between">
-                            <div class="size-12 rounded-full skeleton bg-base-300 lg:bg-base-200"></div>
+                            <div class="size-12 rounded-full skeleton"></div>
                             <div class="w-1/2 mt-4 flex gap-x-3">
-                                <div class="w-1/2 h-8  skeleton bg-base-300 lg:bg-base-200"></div>
-                                <div class="w-1/2 h-8  skeleton bg-base-300 lg:bg-base-200"></div>
+                                <div class="w-1/2 h-8  skeleton"></div>
+                                <div class="w-1/2 h-8  skeleton"></div>
                             </div>
                         </div>
                     </div>
