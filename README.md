@@ -1,0 +1,1 @@
+[![CodeTime Badge](https://img.shields.io/endpoint?style=for-the-badge&color=222&url=https%3A%2F%2Fapi.codetime.dev%2Fshield%3Fid%3D19569%26project%3Dgemma_fx%26in=86400000)](https://codetime.dev)
