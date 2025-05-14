@@ -18,15 +18,13 @@ const activeCategory = ref('featured')
 </script>
 
 <template>
-    <div class="w-full pt-6 md:pt-12">
-        <!-- <div class=" inset-0 bg-radial-pattern">
+    <div class="w-full ">
+        <div class=" inset-0 bg-radial-pattern">
             <Hero />
 
-            <div class="h-max">
-                <ShapesWave />
-            </div>
+
         </div>
-        <Banner /> -->
+        <!-- <Banner /> -->
         <div class="z-0">
             <div class="sticky !z-10 top-0 bg-base-100 border-b border-t border-stone-700/60">
                 <CategoryBar :tab="activeCategory" @category-change="(e) => activeCategory = e" />
