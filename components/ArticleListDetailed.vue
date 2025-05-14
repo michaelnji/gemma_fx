@@ -240,7 +240,7 @@ onMounted(async () => {
                 <div v-if="processedPosts && processedPosts.length >= 1 && !isLoading"
                     class=" pl-3 z-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-8">
 
-                    <div v-for="post in processedPosts">
+                    <div v-for="post, key in processedPosts.filter((x, y) => y <= 9)" :key="key">
                         <BlogCard :details="post" />
                     </div>
 

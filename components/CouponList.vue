@@ -197,7 +197,7 @@ onMounted(async () => {
 
             </div>
             <div class="mt-8" v-if="coupons && coupons.length > 0">
-                <div class="font-medium p-4 max-w-xl  bg-primary/10 text-primary w-max mx-auto">
+                <div class="font-medium p-4 max-w-xl  bg-primary/10 text-primary w-full mx-auto">
                     <Icon name="ph:info-duotone" size="24" />
                     <p class="mt-3">Every time you use a code or link from my list, I get a small commision. This
                         helps me to keep Gemma_fx going</p>
