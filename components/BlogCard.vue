@@ -26,7 +26,7 @@
                         <NuxtTime :datetime="details.publishedAt" year="numeric" month="long" day="numeric"
                             class="font-bold" />
                     </div>
-                    <div class=" bg-base-100  text-base-content">
+                    <div class=" bg-base-100   text-base-content">
                         <NuxtImg :src="$urlFor(details.imageUrl).format('webp').height(700).width(1400).url()"
                             class="mb-3" :custom="true" v-slot="{ src, isLoaded, imgAttrs }">
 
@@ -37,7 +37,7 @@
                             <div class="h-[17.5rem] w-full skeleton bg-base-300 lg:bg-base-200 " v-if="!isLoaded">
                             </div>
                         </NuxtImg>
-                        <div class="p-6">
+                        <div class="p-6 border-t border-stone-800">
                             <h2 class=" font-display  text-pretty text-2xl">
                                 {{ details.title }}
                             </h2>
