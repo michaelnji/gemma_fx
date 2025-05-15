@@ -5,58 +5,25 @@
     <div class="">
         <div class="   flex flex-col lg:flex-row ">
 
-            <div class="xl:pl-12 pt-12 lg:px-6 lg:!w-4/5 w-full">
-                <h1 class="text-3xl px-6 lg:px-0 font-bold font-display  ">Featured Today</h1>
-                <div class="mt-6 flex flex-wrap items-center md:flex-nowrap gap-4">
-                    <div class="md:w-1/2 w-full xl:w-3/5 bg-primary  text-black">
-                        <div
-                            class="p-6  border-b-0.5 transition  border-b-base-100 hover:bg-black hover:text-primary border border-transparent hover:border-primary">
+            <div class="xl:pl-12 pt-12 px-3 lg:!w-4/5 w-full">
+                <h1 class="text-4xl lg:text-5xl  font-bold font-condensed  ">Featured Today</h1>
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 
-                            <h2 class="font-black font-condensed md:text-5xl text-4xl xl:text-6xl">How to actually trade
-                                options the right way</h2>
-                            <p class="opacity-80  mt-6 font-medium xl:text-lg text-base line-clamp-2">Lorem ipsum dolor,
-                                sit
-                                amet
-                                consectetur
-                                adipisicing
-                                elit. Quod
-                                temporibus est
-                                vel aut assumenda, dolorem vero similique eligendi mollitia? Expedita!</p>
-                            <p class="mt-3 font-bold opacity-85 text-sm">
-                                <NuxtTime :datetime="new Date()" year="numeric" month="long" day="numeric"
-                                    class="mt-12 font-bold opacity-85 text-sm" />
-                            </p>
-                        </div>
-
-                        <div
-                            class="p-6 border-t-0.5 transition  border-t-base-100 hover:bg-black hover:text-primary border border-transparent hover:border-primary">
-
-                            <h2 class="font-black font-condensed md:text-5xl text-4xl xl:text-6xl">The best traders are
-                                the
-                                patient ones</h2>
-                            <p class="opacity-80  mt-6 font-medium xl:text-lg text-base line-clamp-2">Lorem ipsum dolor,
-                                sit
-                                amet
-                                consectetur
-                                adipisicing
-                                elit. Quod
-                                temporibus est
-                                vel aut assumenda, dolorem vero similique eligendi mollitia? Expedita!</p>
-                            <p class="mt-3 font-bold opacity-85 text-sm">
-                                <NuxtTime :datetime="new Date()" year="numeric" month="long" day="numeric"
-                                    class="mt-12 font-bold opacity-85 text-sm" />
-                            </p>
-                        </div>
-                    </div>
-                    <div class="xl:w-2/5 lg:h-max xl:h-auto md:w-1/2 w-full bg-secondary  text-black">
-                        <img src="/stock-1.jpg" alt="" class="mb-2">
-                        <div class="p-6">
+                    <div v-for="i, key in useRange(1, 3)" :class="{ 'md:!hidden xl:!inline': key === 0 }"
+                        class="w-full bg-base-300">
+                        <img src="https://cdn.sanity.io/images/1h1ec0mp/production/461903a5ddd82afd7385fdf8c59167e6ad259313-1400x700.png?w=1400&h=700&fm=webp"
+                            alt="" class="mb-2">
+                        <div class="p-4">
                             <p class="uppercase tracking-widest mb-2">BY GEMTRADER</p>
-                            <h2 class="font-black underline font-display md:text-4xl text-3xl xl:text-5xl">Your mentors
+                            <h2 class="font-black text-pretty font-display  text-2xl">Your mentors
                                 are
                                 scamming you</h2>
-
-                            <p class="mt-12 font-bold opacity-85 text-sm">
+                            <p class="mt-3 opacity-80 line-clamp-2">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab mollitia amet sint eius
+                                nemo voluptates debitis dicta harum repellat voluptatum distinctio cumque ullam, odio
+                                totam laboriosam? Tempore eos qui obcaecati.
+                            </p>
+                            <p class="mt-3 font-bold opacity-85 text-sm">
                                 <NuxtTime :datetime="new Date()" year="numeric" month="long" day="numeric"
                                     class="mt-12 font-bold opacity-85 text-sm" />
                             </p>
@@ -64,32 +31,34 @@
                     </div>
                 </div>
 
-                <h1 class=" mt-12 px-6 lg:px-0 text-3xl font-bold font-display  ">Featured Firms</h1>
-                <div
-                    class="mt-6 px-6 lg:px-0 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 pb-12 gap-3">
-                    <div v-for="i, key in useRange(0, 3)" :key="key"
-                        class=" p-6 bg-base-200 shadow-2xl shadow-base-200">
-                        <!-- <p class="uppercase tracking-widest mb-2">BY GEMTRADER</p> -->
-                        <h2 class="font-black font-display text-xl">Goat Funded Trader</h2>
+                <div class="my-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 
-                        <div class="flex mt-3">
-                            <Rating :rating="5" size="lg" :id="`rating-${key}`" theme="primary" />
+                    <div v-for="i, key in useRange(1, 3)" :class="{ 'md:!hidden xl:!inline': key === 0 }"
+                        class="w-full bg-secondary text-secondary-content ">
+
+                        <div class="p-4">
+                            <p class="mb-2 font-bold text-secondary bg-secondary-content py-1 px-3 w-max">OPINION</p>
+                            <h2
+                                class="font-bold underline text-pretty font-condensed text-4xl md:text-5xl  xl:text-6xl">
+                                Why trading is the same
+                                as
+                                gambling</h2>
+
+                            <p class="mt-3 font-bold opacity-85 text-sm">
+                                <NuxtTime :datetime="new Date()" year="numeric" month="long" day="numeric"
+                                    class="mt-12 font-bold opacity-85 text-sm" />
+                            </p>
                         </div>
-
-                        <NuxtLink to="/" class="underline flex items-center-safe gap-x-2 mt-3 text-base-content">Read
-                            review
-                            <Icon name="ph:arrow-right" />
-                        </NuxtLink>
                     </div>
-
-
                 </div>
+
+
 
             </div>
             <div class="lg:w-2/5 w-full !min-h-full bg-white text-black p-3 py-12">
                 <h1 class="text-5xl font-bold font-condensed  ">Popular</h1>
                 <div class="mt-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-3">
-                    <div v-for="i in useRange(0, 5)" class="flex bg-stone-100 p-3 gap-x-2">
+                    <div v-for="i, key in useRange(0, 4)" :key="key" class="flex bg-stone-100 p-3 gap-x-2">
 
                         <div class="w-full">
                             <NuxtTime :datetime="new Date()" year="numeric" month="long" day="numeric"
@@ -98,7 +67,7 @@
                                 copy-trading
                                 on MT5
                             </h2>
-                            <p class="line-clamp-1 text-sm opacity-80">Lorem ipsum, dolor sit amet consectetur
+                            <p class="line-clamp-2 text-sm opacity-80">Lorem ipsum, dolor sit amet consectetur
                                 adipisicing
                                 elit.
                                 Facere
@@ -109,73 +78,7 @@
                     </div>
 
                 </div>
-                <h1 class="text-2xl mt-12  font-display  ">Codes of the week</h1>
-                <div class=" flex flex-wrap gap-4 w-full mt-3">
-                    <div class="bg-black rounded-xl text-white p-3 ">
 
-                        <h2
-                            class="xl:text-5xl text-3xl !my-0 !py-0 font-condensed font-bold opacity-90  text-secondary ">
-                            BLESS2025
-                        </h2>
-
-                    </div>
-                    <div class="bg-black rounded-xl text-white p-3 ">
-
-                        <h2
-                            class="xl:text-5xl text-3xl !my-0 !py-0 font-condensed font-bold opacity-90  text-secondary ">
-                            NEWCOMER
-                        </h2>
-
-                    </div>
-                    <div class="bg-black rounded-xl text-white p-3 ">
-
-                        <h2
-                            class="xl:text-5xl text-3xl !my-0 !py-0 font-condensed font-bold opacity-90  text-secondary ">
-                            BLESS2025
-                        </h2>
-
-                    </div>
-                    <div class="bg-black rounded-xl text-white p-3 ">
-
-                        <h2
-                            class="xl:text-5xl text-3xl !my-0 !py-0 font-condensed font-bold opacity-90  text-secondary ">
-                            NEWCOMER
-                        </h2>
-
-                    </div>
-                    <div class="bg-black rounded-xl text-white p-3 ">
-
-                        <h2
-                            class="xl:text-5xl text-3xl !my-0 !py-0 font-condensed font-bold opacity-90  text-secondary ">
-                            BLESS2025
-                        </h2>
-
-                    </div>
-                    <div class="bg-black rounded-xl text-white p-3 ">
-
-                        <h2
-                            class="xl:text-5xl text-3xl !my-0 !py-0 font-condensed font-bold opacity-90  text-secondary ">
-                            NEWCOMER
-                        </h2>
-
-                    </div>
-                    <div class="bg-black rounded-xl text-white p-3 ">
-
-                        <h2
-                            class="xl:text-5xl text-3xl !my-0 !py-0 font-condensed font-bold opacity-90  text-secondary ">
-                            BLESS2025
-                        </h2>
-
-                    </div>
-                    <div class="bg-black rounded-xl text-white p-3 ">
-
-                        <h2
-                            class="xl:text-5xl text-3xl !my-0 !py-0 font-condensed font-bold opacity-90  text-secondary ">
-                            NEWCOMER
-                        </h2>
-
-                    </div>
-                </div>
             </div>
         </div>
 
