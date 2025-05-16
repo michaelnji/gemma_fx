@@ -38,7 +38,7 @@ onMounted(async () => {
 <template>
     <div class="min-h-screen">
         <div class="inset-0 bg-radial-pattern px-6">
-            <div class="container xl:max-w-[90rem] mx-auto pt-12 pb-6">
+            <div class="container xl:max-w-[85rem] mx-auto pt-12 pb-6">
                 <div class="skeleton mb-6 bg-base-200 w-[10rem] h-[2rem]" v-if="isLoading"></div>
                 <div v-if="!isLoading && post"
                     class="p-[1px] bg-gradient-to-tl from-primary via-secondary to-success w-max mb-3">
@@ -52,7 +52,8 @@ onMounted(async () => {
                 </div>
                 <div class="skeleton mb-3 bg-base-200 w-full h-[6rem]" v-if="isLoading"></div>
                 <div class="skeleton   w-full h-[6rem]" v-if="isLoading"></div>
-                <h1 v-if="!isLoading && post" class=" lg:text-8xl md:text-7xl  text-4xl !text-pretty  font-display">
+                <h1 v-if="!isLoading && post"
+                    class=" lg:text-9xl md:text-8xl  text-6xl !text-pretty font-bold  font-condensed">
                     {{ post?.title }}
                 </h1>
 
@@ -88,7 +89,7 @@ onMounted(async () => {
                         <div v-if="!isLoading && post && post.tags" v-for="tag, k in post?.tags">
                             <nuxt-link :to="`/articles?tag=${spacesToDashes(tag.title)}`"><span
                                     class=" badge   bg-stone-800 ">{{
-                                    spacesToDashes(tag.title) }}</span></nuxt-link>
+                                        spacesToDashes(tag.title) }}</span></nuxt-link>
                         </div>
                         <div v-for="i in useRange(0, 2)" class="skeleton   w-[4.5rem] h-[2rem]" v-if="isLoading">
                         </div>
@@ -109,7 +110,7 @@ onMounted(async () => {
 
             </div>
         </div>
-        <div class="lg:pt-12 w-full xl:max-w-[90rem] px-6  mx-auto lg:flex gap-x-12">
+        <div class="lg:pt-12 w-full xl:max-w-[85rem] px-6  mx-auto lg:flex gap-x-12">
             <div class="lg:w-3/5">
                 <div class="skeleton   w-full h-[12.5rem] md:h-[25rem]" v-if="isLoading">
                 </div>
