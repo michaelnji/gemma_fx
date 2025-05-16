@@ -11,7 +11,7 @@
 
                     <div v-for="i, key in useRange(1, 3)" :class="{ 'md:!hidden xl:!inline': key === 0 }"
                         class="w-full bg-base-100 ">
-                        <img src="https://cdn.sanity.io/images/1h1ec0mp/production/461903a5ddd82afd7385fdf8c59167e6ad259313-1400x700.png?w=1400&h=700&fm=webp"
+                        <img src="https://cdn.sanity.io/images/1h1ec0mp/production/7ffff7d3b32c2618e1ce84651feedab71d25223e-1400x700.png?w=1400&h=700&fm=webp"
                             alt="" class="">
                         <div class="p-4 border-l-2 border-r-2 border-b-2 border-base-300">
                             <p class="uppercase tracking-widest mb-2">BY GEMTRADER</p>

@@ -55,35 +55,30 @@ function toggleMenu() {
             <div
                 class="navbar-center max-w-max text-base xl:text-lg font-semibold hidden lg:flex rounded-none bg-base-300 px-3 py-1">
                 <ul class="menu menu-horizontal items-center-safe px-1 gap-x-3">
-                    <li
-                        :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/' }">
+                    <li>
                         <NuxtLink
-                            class=" rounded-none hover:!bg-primary/10  hover:!text-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content transition duration-150"
+                            :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/' }"
+                            class=" rounded-none hover:bg-primary/10  hover:text-primary transition duration-150"
                             to="/">Home</NuxtLink>
                     </li>
 
-                    <li
-                        :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/articles' }">
+                    <li>
                         <NuxtLink
-                            class=" rounded-none hover:!bg-primary/10  hover:!text-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content transition duration-150"
+                            :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/articles' }"
+                            class=" rounded-none hover:bg-primary/10  hover:text-primary transition duration-150"
                             to="/articles">Articles</NuxtLink>
                     </li>
-                    <!-- <li 
-                        :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/tutorials' }">
-                        <NuxtLink class=" rounded-none hover:!/10bg-primary  hover:!text-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content transition duration-150" to="/tutorials">Tutorials
 
-                        </NuxtLink>
-                    </li> -->
-                    <li
-                        :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/prop-firms' }">
+                    <li>
                         <NuxtLink
-                            class=" rounded-none hover:!bg-primary/10  hover:!text-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content transition duration-150"
+                            :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/prop-firms' }"
+                            class=" rounded-none hover:bg-primary/10  hover:text-primary transition duration-150"
                             to="/prop-firms">Prop firm reviews</NuxtLink>
                     </li>
-                    <li
-                        :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path.includes('/promo') }">
+                    <li>
                         <NuxtLink
-                            class=" rounded-none hover:!bg-primary/10  hover:!text-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content transition duration-150"
+                            :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path.includes('/promo') }"
+                            class=" rounded-none hover:bg-primary/10  hover:text-primary transition duration-150"
                             to="/promo">Promo codes <span class="badge badge-sm badge-primary"
                                 :class="{ '!bg-black !text-primary !shadow-none !border-primary': route.path.includes('/promo') }">new!</span>
                         </NuxtLink>
@@ -119,7 +114,7 @@ function toggleMenu() {
 }" class=" rounded-none hover:bg-base-100/10  text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/' }">
                             <NuxtLink
-                                class=" rounded-none hover:!bg-primary/10  hover:!text-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content transition duration-150"
+                                class=" rounded-none hover:bg-primary/10  hover:text-primary transition duration-150"
                                 to="/">Home</NuxtLink>
                         </li>
 
@@ -129,7 +124,7 @@ function toggleMenu() {
                         }" class=" rounded-none hover:bg-base-100/10  text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/articles' }">
                             <NuxtLink
-                                class=" rounded-none hover:!bg-primary/10  hover:!text-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content transition duration-150"
+                                class=" rounded-none hover:bg-primary/10  hover:text-primary transition duration-150"
                                 to="/articles">Articles</NuxtLink>
                         </li>
                         <!-- <li @click="() => {
@@ -147,7 +142,7 @@ function toggleMenu() {
                         }" class=" rounded-none hover:bg-base-100/10  text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path === '/prop-firms' }">
                             <NuxtLink
-                                class=" rounded-none hover:!bg-primary/10  hover:!text-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content transition duration-150"
+                                class=" rounded-none hover:bg-primary/10  hover:text-primary transition duration-150"
                                 to="/prop-firms">Prop firm reviews</NuxtLink>
                         </li>
                         <li @click="() => {
@@ -156,7 +151,7 @@ function toggleMenu() {
                         }" class=" rounded-none hover:bg-base-100/10  text-base hover:text-base-content transition duration-150"
                             :class="{ '!bg-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content  !text-primary-content': route.path.includes('/promo') }">
                             <NuxtLink
-                                class=" rounded-none hover:!bg-primary/10  hover:!text-primary focus:!bg-primary focus:!text-primary-content active:!bg-primary active:!text-primary-content transition duration-150"
+                                class=" rounded-none hover:bg-primary/10  hover:text-primary transition duration-150"
                                 to="/promo">Promo codes <span class="badge badge-sm badge-accent"
                                     :class="{ '!bg-black !text-primary !shadow-none !border-primary': route.path.includes('/promo') }">new!</span>
                             </NuxtLink>
